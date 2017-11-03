@@ -2,8 +2,6 @@ language: node_js
 cache: npm
 node_js:
   - 8
-script:
-  - now -e NODE_ENV=production
 after_script:
   - NOW_ALIAS=tdevisscher.com node_modules/.bin/now-travis
 branches:
