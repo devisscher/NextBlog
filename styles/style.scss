@@ -1,0 +1,96 @@
+@import 'milligram/dist/milligram';
+$primary-color-dark: #7b1fa2;
+$primary-color: #9c27b0;
+$primary-color-light: #e1bee7;
+$primary-color-text: #ffffff;
+$accent-color: #b0a727;
+//$accent-color:         #9E9E9E;
+$primary-text-color: #212121;
+$secondary-text-color: #757575;
+$divider-color: #bdbdbd;
+
+/* Custom color */
+
+body {
+  margin: 0;
+}
+
+.page {
+  max-width: 800px;
+  padding-top: 50px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.button-black {
+  background-color: black;
+  border-color: black;
+}
+
+.button-black.button-clear,
+.button-black.button-outline {
+  background-color: transparent;
+  color: black;
+}
+
+.button-black.button-clear {
+  border-color: transparent;
+}
+
+/* Custom size */
+
+.button-small {
+  font-size: 0.8rem;
+  height: 2.8rem;
+  line-height: 2.8rem;
+  padding: 0 1.5rem;
+}
+
+.button-large {
+  font-size: 1.4rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  padding: 0 2rem;
+}
+
+@for $i from 1 through 100 {
+  .percentage-#{$i} {
+    $value: ($i * 1%);
+    padding-left: 3px;
+    padding-bottom: 0px;
+    margin: 1px;
+    background: linear-gradient(to right, $primary-color-light $value, #fff 0%);
+  }
+}
+
+// FLOAT PICTURES
+.contained {
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+.floated {
+  float: left;
+  padding-right: 10px;
+  width: 300px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.2);
+  padding: 0px 8px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
