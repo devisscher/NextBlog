@@ -1,8 +1,9 @@
 ---
 date: 1502989953962
 title: "My first gatsby post"
-number: 003
+number: 004
 tags: 
+    - Blog
     - JavaScript
 ---
 

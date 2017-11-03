@@ -55,7 +55,7 @@ export default class PostPage extends React.Component {
       const tagItems = tags.map(tag => (
         <Tag href={`/tags/${tag.toLowerCase()}`}>{tag}</Tag>
       ));
-      return <div className="row">{tagItems}</div>;
+      return <div>{tagItems}</div>;
     }
     return (
       <Layout>

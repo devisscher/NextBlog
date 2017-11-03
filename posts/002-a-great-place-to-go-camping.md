@@ -1,7 +1,7 @@
 ---
 title: "A great place to go camping!"
 date: 1467450000000
-number: 001
+number: 002
 url: 
 tags: 
     - Adventure
@@ -24,7 +24,7 @@ We were quite happy with our weekend, our campsite was beside a huge cliff, it h
 
 [Lac Poisson Blanc (Reservations)](http://poissonblanc.ca/en/ "Lac Poisson Blanc's home page")
 
-[Camp Air Eau Bois'(Parking and Canoe rentals)](http://www.aireaubois.com/fr/services  "Lac Poisson Blanc's home page")
+[Camp Air Eau Bois' (Parking and Canoe rentals)](http://www.aireaubois.com/fr/services  "Lac Poisson Blanc's home page")
 
 
 

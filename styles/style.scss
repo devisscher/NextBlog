@@ -1,5 +1,6 @@
 @import 'milligram/dist/milligram';
-$primary-color-dark: #7b1fa2;
+// Colours
+$primary-color-dark: #9b4dca;
 $primary-color: #9c27b0;
 $primary-color-light: #e1bee7;
 $primary-color-text: #ffffff;
@@ -8,9 +9,10 @@ $accent-color: #b0a727;
 $primary-text-color: #212121;
 $secondary-text-color: #757575;
 $divider-color: #bdbdbd;
-
-/* Custom color */
-
+// Media queries
+$break-small: 375px;
+$break-large: 1200px;
+// Global
 body {
   margin: 0;
 }
@@ -22,15 +24,16 @@ body {
   padding: 15px;
 }
 
+// Button Extensions
 .button-black {
-  background-color: black;
-  border-color: black;
+  background-color: $primary-text-color;
+  border-color: $primary-text-color;
 }
 
 .button-black.button-clear,
 .button-black.button-outline {
   background-color: transparent;
-  color: black;
+  color: $primary-text-color;
 }
 
 .button-black.button-clear {
@@ -53,6 +56,7 @@ body {
   padding: 0 2rem;
 }
 
+// Bar chart
 @for $i from 1 through 100 {
   .percentage-#{$i} {
     $value: ($i * 1%);
@@ -74,6 +78,10 @@ body {
   float: left;
   padding-right: 10px;
   width: 300px;
+  @media screen and (max-width: $break-small) {
+    width: 100%;
+    float: none;
+  }
 }
 
 .dropdown {

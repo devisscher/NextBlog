@@ -1,0 +1,8 @@
+after_script:
+  - NOW_ALIAS=tdevisscher.com node_modules/.bin/now-travis
+branches:
+  only:
+    - master
+env:
+  global:
+    secure: ilS4MKGwwWp+PUzIJ3kaT7NMrjhHJJzCXh0JkMMv5RZV0Uy7Ud7bKKBmi7Ts3q9djf1+M954st22Y+h6hIVqDK+oN1fKRCWu5ZTXQ66k+gyvknl4jGDAiQ+k3aRtez1lZilgfWqMJeyE3OXREO3AtWf7XRAEMsOBwoheblPVQ79sdXqVTa35s+P+pstBN/b1hpbW67WwFFNzS+ABVomGNp9yyynZVFacFEL92QVWncTZuSWx6iLsDq8BdWBKuxtANnYjY1rT2JK4SbQsJlWmVb2WR9wLUUh+7oOjPtIEm7hwhKMg2mNYXmo/6LhLfzGzjQZwY6cjYU+txp43Hj1kxmhi1hivZr+NOZKAwhQJ8xsvDDQAfGxr0wavbHavx6ukpbVIsB6AnEkk0zYGstlSSURLuBpuSPF/u2mtdiFWVAQdAWIq2pgOHxedHWZBTTSYtr6Fahm9/nDukM833qP84JyG0UHf+DQzrr8P/t+z4Cqrsj6hp5B/7m6qSS90Wvsapso6JbxVOBKXnkh2a/Us3nAySGCVIShbykl2nV+MMKOhlq6+4DxttsjptIOs/2IhaQjvHrVYXvQwWyMn4v0/ye3jSmiuoNchmm7sPhhcxAc4B00OUkOrbsd9Ne98jQwkUFxr1HeadcyvBc1IYs/jXAtvUPctMCn2EYqjnhogT7U=

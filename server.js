@@ -10,7 +10,8 @@ const {
   getPosts,
   getPost,
   getTags,
-  getPostsTaggedWith
+  getPostsTaggedWith,
+  getProjects
 } = require('./lib/getPosts');
 
 app.prepare().then(() => {
@@ -38,6 +39,9 @@ app.prepare().then(() => {
       return;
     }
     res.status(404).json({ message: 'Sorry not found' });
+  });
+  server.get('/api/projects', (req, res) => {
+    res.json(getProjects());
   });
   // Define other pages here
   server.get('/static', (req, res) => {
