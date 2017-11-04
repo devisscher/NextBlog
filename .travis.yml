@@ -1,6 +1,7 @@
 language: node_js
 node_js:
 - 8
+cache: yarn
 after_script:
   - NOW_ALIAS=tdevisscher.com node_modules/.bin/now-travis --file=now-staging-url
 
