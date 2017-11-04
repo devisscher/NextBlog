@@ -2,8 +2,9 @@ language: node_js
 cache: npm
 node_js:
 - 8
-after_script:
-- NOW_ALIAS=tdevisscher.com node_modules/.bin/now-travis
+script:
+  - NOW_ALIAS=tdevisscher.com node_modules/.bin/now-travis
+
 branches:
   only:
   - master
