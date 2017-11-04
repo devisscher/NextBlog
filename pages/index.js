@@ -23,7 +23,7 @@ export default class Index extends React.Component {
     const { posts = [], baseURL } = this.props;
     return (
       <Layout>
-        <h2>Home</h2>
+        <h2>Test Home</h2>
         <Posts posts={posts} />
       </Layout>
     );
