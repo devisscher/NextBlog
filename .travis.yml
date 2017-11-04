@@ -1,11 +1,5 @@
 language: node_js
 node_js:
-- 8
-after_script:
-  - NOW_ALIAS=tdevisscher.com node_modules/.bin/now-travis --file=now-staging-url
-branches:
-  only:
-  - master
-env:
-  global:
-    secure: R3Q7UqYJEQc8z+/SyIGAbS45xzDeOKbxho3XUcbbqNNuXZ7UF3rtemM+nEaMOLXC5vf7tICJv0oIgiC6DrxEN3YFdzvRuQoMox4QcEIDCpxoGs7mzZUpH2FP0u9cADukKntdcSfJusa1j25AdxUrSfwEnBdjNH23wMPf4WEIaGODi1EBoJS4KPz3iS0M/5EmaJZJiuTm8xkR4s6srmJ4KTSsvZACxlB85jZw9+1L0kF5uL9agHrRox/Eak/LHSLs+2GK6kGkxIn3ucy6sunWdtMs3h3jk9nl5AXLi3IFChcLlhzdAVqYwU6k11iZ2RaqcksV2n28a+JsRBkAoOBOjyOXcgIZ0IVDzuCeNw+moXVoLRx0JtnmJxH/F/nHx94bGw73X4amZVfy9J5au9UKXrIM55giKWJYx0GKkkeuLXTxE/FiYMPYMOfi86YSCRAJhBJ302LMS7oFcnpKywUhf319vuKo59koMazNN6zR7levHvqHUIlEXCNRkC61aqx0+tUM19XcT5bTVEht/gsJ/NjP56PLUDnsPbNRulQsMHw4TW15mapS0kze6KKzmvZM/1BXXfLR00hV7qQjaKlrKWCB53G1Ual42JlB7pEZztr4j0yDVePFmnGhApz3IsvYNCTQMqlwpVt64P5ZCWIfZiSAC8lpUFRm7WOVCnneqCw=
+  - "node"
+cache: yarn
+script: yarn deploy
