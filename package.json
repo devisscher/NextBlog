@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "file-loader": "^1.1.5",
+    "now-travis": "^1.1.0",
     "url-loader": "^0.6.2"
   }
 }
