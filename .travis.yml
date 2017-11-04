@@ -2,7 +2,7 @@ language: node_js
 cache: npm
 node_js:
 - 8
-script:
+after_script:
   - NOW_ALIAS=tdevisscher.com node_modules/.bin/now-travis --file=now-staging-url
 
 branches:
