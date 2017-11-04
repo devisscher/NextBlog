@@ -1,5 +1,4 @@
 import axios from 'axios';
-import config from '../static/config';
 import Layout from '../components/Layout';
 
 export default class About extends React.Component {
@@ -11,7 +10,6 @@ export default class About extends React.Component {
   }
   componentDidMount() {}
   render() {
-    console.log(this.state.information);
     return (
       <Layout>
         <h2>About Me</h2>

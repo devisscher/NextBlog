@@ -1,5 +1,4 @@
 import axios from 'axios';
-import config from '../../static/config';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 
@@ -15,12 +14,12 @@ export default class Extras extends React.Component {
     console.log(this.state.information);
     return (
       <Layout>
-        <p>Extras</p>
+        <h2>Extras</h2>
         <p>Little projects that aren't really blog posts</p>
         <ul>
           <li>
             <Link href="/extras/quotes">
-              <a>These quotes are cool to me.</a>
+              <a>These quotes are cool to me</a>
             </Link>
           </li>
           <li>
@@ -30,7 +29,12 @@ export default class Extras extends React.Component {
           </li>
           <li>
             <Link href="https://devisscher.github.io/sudoku-solver">
-              <a>Sudoku Solver.</a>
+              <a>Sudoku Solver</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/extras/booket-list">
+              <a>Booket List</a>
             </Link>
           </li>
         </ul>

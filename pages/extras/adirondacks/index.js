@@ -30,7 +30,7 @@ export default class Adirondacks extends React.Component {
     return (
       <Layout>
         <div>
-          <h1>Adirondacks 46 Peaks</h1>
+          <h2>Adirondacks 46 Peaks</h2>
           <p>
             <strong>Objective:</strong> To complete the ascension of every peak
             in the Adirondacks. "The mountains are calling and I must go." 😎

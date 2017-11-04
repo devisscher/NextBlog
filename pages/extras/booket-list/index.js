@@ -28,7 +28,7 @@ export default class BooketList extends React.Component {
   render() {
     return (
       <Layout>
-        <h1>Booket List</h1>
+        <h2>Booket List</h2>
         <p>A list of books I need to read before I die.</p>
         <ul>
           {this.state.results.map(result => {

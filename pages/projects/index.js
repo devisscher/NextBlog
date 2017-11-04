@@ -23,6 +23,8 @@ export default class Index extends React.Component {
     const { projects = [], baseURL } = this.props;
     return (
       <Layout>
+        <h2>Projects</h2>
+        <p>A non exhaustive list of projects I've completed.</p>
         <Projects projects={projects} />
       </Layout>
     );
