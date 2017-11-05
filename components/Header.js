@@ -45,6 +45,11 @@ const links = [
         slug: 'home'
       },
       {
+        name: 'Projects',
+        url: '/projects',
+        slug: 'projects'
+      },
+      {
         name: 'Tags',
         url: '/tags',
         slug: 'tags'

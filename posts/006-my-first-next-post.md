@@ -6,15 +6,11 @@ tags:
     - Blog
     - JavaScript
 ---
+Another switch...
 
-Well, Gatsby was nice, but I didn't feel great about it. No offense to anyone who is working on Gatsby, it is a great system. I made the switch because I came across this framework called [Next.js](https://github.com/zeit/next.js/). I was immediately seduced by the way it proposes to do things. Additionally it provides a complete deployment workflow which takes away the hassle of configuring all that. Thank you to the folks at [Zeit](https://zeit.co/), your work is phenomenal. As I don't wish to spend all my time working on my blog, I felt the switch would make my life easier. Hopefully this decision will last a little while.
+Well, Gatsby was nice, but I didn't feel great about it. No offense to anyone who is working on Gatsby, it's great! 
 
-## Some cool things to mention about Next
-
-- By using a custom server configuration, you can serve static assets such as markdown posts. Shoutout to [Syntax.fm](https://syntax.fm), this website is inspired by the techniques Wes and Scott used to parse and render markdown.
-- Each component and or folder containing a component within the pages directory will render a React component.
-- Deploying is as simple as typing ``` now ```.
-- I'm using Milligram CSS framework which relies heavily on Flexbox for layouts. This makes the grid system really slick and intuitive.
+I made the switch because I came across this framework called [Next.js](https://github.com/zeit/next.js/). I was immediately seduced by the way it proposes to do things. Additionally it provides a complete deployment workflow which takes away the hassle of configuring all that. Thank you to the folks at [Zeit](https://zeit.co/), your work is phenomenal. As I don't wish to spend all my time working on my blog, I felt the switch would make my life easier. Hopefully this decision will last a little while.
 
 ## Deployment
 
@@ -37,12 +33,16 @@ env:
     secure: <this is your encrypted NOW token. It was added when you ran travis encrypt in #3>
 ```
 
-5. Create a file named ``` now.json ``` and add the following information tailored to your site information. This is used to run the alias command and point your domain to the correct deployment. Alternatively you can create a ```now``` property in your ```package.json```: 
+5. Open your ```package.json``` file and add the following information tailored to your site information. This is used to run the alias command and point your domain to the correct deployment. (You could also put this in a ```now.json``` file): 
 
 ```JSON
 {
-  "name": "tdevisscher",
-  "alias": ["tdevisscher.com"]
+    ...
+    "now":{
+        "name": "tdevisscher",
+        "alias": ["tdevisscher.com"]
+        }
+    ...
 }
 ```
 
@@ -59,13 +59,20 @@ env:
 }
 ```
 
-7. Test it out by commiting your code to Github
+7. Test it out by committing your code to Github
 
-If you want more info about deployments with Now check out these articles:
-- https://zeit.co/blog/now-json
+If you want more info about deployments with Now check out this article: https://zeit.co/blog/now-json
 
+## Some cool things to mention about Next
 
-Again this is a WIP as are all my blogs and websites. Changing platforms is a recurring theme so here is a list of posts which talk about my older sites.
+- By using a custom server configuration, you can serve static assets such as markdown posts. Shout out to [Syntax.fm](https://syntax.fm), this website is inspired by the techniques Wes and Scott used to parse and render markdown.
+- Each component and or folder containing a component within the pages directory will render a React component.
+- Deploying is as simple as typing ``` now ``` or in my case pushing my code to Github.
+- I'm using Milligram CSS framework which relies heavily on Flexbox for layouts. This makes the grid system really slick and intuitive.
+
+Again this is a WIP as are all my blogs and websites. 
+
+Changing platforms is a recurring theme so here is a list of posts which talk about my older sites.
 
 - [Jekyll Website](/blog/post/001/welcome-old-jekyll-site)
-- [Gatsby Website](/blog/post/001/welcome-old-jekyll-site)
+- [Gatsby Website](/blog/post/004/my-first-gatsby-post)
