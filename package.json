@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "now": {
+    "name": "tdevisscher",
+    "alias": ["tdevisscher.com"]
+  },
   "scripts": {
     "start": "node server.js",
     "build": "next build",

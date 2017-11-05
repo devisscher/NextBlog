@@ -54,12 +54,16 @@ env:
 "scripts": {
 ...
     "deploy": "now -e NODE_ENV=production --token $NOW_TOKEN --npm",
-    "alias": "now alias --token $NOW_TOKEN"
+    "alias": "now alias --token=$NOW_TOKEN"
     }
 }
 ```
 
 7. Test it out by commiting your code to Github
+
+If you want more info about deployments with Now check out these articles:
+- https://zeit.co/blog/now-json
+
 
 Again this is a WIP as are all my blogs and websites. Changing platforms is a recurring theme so here is a list of posts which talk about my older sites.
 
