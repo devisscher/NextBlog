@@ -63,7 +63,7 @@ env:
 
 If you want more info about deployments and setting up Travis with [Now.sh](https://now.sh) check out this article: https://zeit.co/blog/now-json.
 
-## Some cool things to mention about Next
+## Some cool things to mention about Next and this site
 
 - By using a custom server configuration, you can serve static assets such as markdown posts. Shout out to [Syntax.fm](https://syntax.fm), this website is inspired by the techniques Wes and Scott used to parse and render markdown.
 - Each component and or folder containing a component within the pages directory will render a React component.
