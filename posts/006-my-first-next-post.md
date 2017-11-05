@@ -16,6 +16,10 @@ Well, Gatsby was nice, but I didn't feel great about it. No offense to anyone wh
 - Deploying is as simple as typing ``` now ```.
 - I'm using Milligram CSS framework which relies heavily on Flexbox for layouts. This makes the grid system really slick and intuitive.
 
+## Deployment
+
+Deployment with Now.sh is a breeze but you might want to automate. Here is how I achieved it for this website using Git and Travis.
+
 Again this is a WIP as are all my blogs and websites. Changing platforms is a recurring theme so here is a list of posts which talk about my older sites.
 
 - [Jekyll Website](/blog/post/001/welcome-old-jekyll-site)
