@@ -8,17 +8,17 @@ tags:
 ---
 Another switch...
 
-Well, Gatsby was nice, but I didn't feel great about it. No offense to anyone who is working on Gatsby, it's great! 
+Well, [Gatsby](/blog/post/004/my-first-gatsby-post) was nice, but I didn't feel great about it. No offense to anyone who is working on Gatsby, it's great! I'm not familiar with GraphQL and I think it add some complexity that I wasn't ready to deal with for a personal site.
 
-I made the switch because I came across this framework called [Next.js](https://github.com/zeit/next.js/). I was immediately seduced by the way it proposes to do things. Additionally it provides a complete deployment workflow which takes away the hassle of configuring all that. Thank you to the folks at [Zeit](https://zeit.co/), your work is phenomenal. As I don't wish to spend all my time working on my blog, I felt the switch would make my life easier. Hopefully this decision will last a little while.
+I came across this framework called [Next.js](https://github.com/zeit/next.js/). I was immediately seduced by the way it proposes to do things. Additionally it provides a complete deployment workflow which takes away the hassle of configuring all that. Thank you to the folks at [Zeit](https://zeit.co/), your work is phenomenal. As I don't wish to spend all my time working on my website, I felt the switch would make my life easier. Hopefully this decision will last a little while.
 
 ## Deployment
 
-Deployment with Now.sh is a breeze but you might want to automate. Here is how I achieved it for this website using Git and Travis. Every time I push or merge to the master branch a new deployment is initiated in Travis.
+Deployment with [Now.sh](https://now.sh) is a breeze but you might want to automate it. Here is how I achieved it for this website using Git and Travis. Every time I push or merge to the master branch a new deployment is initiated in Travis.
 
 1. You need to get credentials from Zeit: https://zeit.co/account/tokens take note of this we will need it later. 
 2. Create a ```.travis.yml``` file.
-3. Generate secure variables for your Zeit token by running the following command. (You need to install Travis CLI tools): ```travis encrypt -r <username>/<repo> NOW_TOKEN=xxxxxxxxxxxxxxxxxxxxxxx --add```
+3. Generate secure variables for your Zeit token by running the following command. (You need to install [The Travis Client](https://github.com/travis-ci/travis.rb#installation)): ```travis encrypt -r <username>/<repo> NOW_TOKEN=xxxxxxxxxxxxxxxxxxxxxxx --add```
 4. Now open your ```.travis.yml``` file and add the following:
 
 ```YAML
@@ -61,7 +61,7 @@ env:
 
 7. Test it out by committing your code to Github
 
-If you want more info about deployments with Now check out this article: https://zeit.co/blog/now-json
+If you want more info about deployments and setting up Travis with [Now.sh](https://now.sh) check out this article: https://zeit.co/blog/now-json
 
 ## Some cool things to mention about Next
 
