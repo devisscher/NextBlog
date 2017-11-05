@@ -59,9 +59,9 @@ env:
 }
 ```
 
-7. Test it out by committing your code to Github
+7. Test it out by committing your code to Github.
 
-If you want more info about deployments and setting up Travis with [Now.sh](https://now.sh) check out this article: https://zeit.co/blog/now-json
+If you want more info about deployments and setting up Travis with [Now.sh](https://now.sh) check out this article: https://zeit.co/blog/now-json.
 
 ## Some cool things to mention about Next
 
