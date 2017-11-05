@@ -8,7 +8,7 @@ tags:
 ---
 Another switch...
 
-Well, [Gatsby](/blog/post/004/my-first-gatsby-post) was nice, but I didn't feel great about it. No offense to anyone who is working on Gatsby, it's great! I'm not familiar with GraphQL and I think it add some complexity that I wasn't ready to deal with for a personal site.
+Well, [Gatsby](/blog/post/004/my-first-gatsby-post) was nice, but I didn't feel great about it. No offense to anyone who is working on Gatsby, it's great! I'm not familiar with GraphQL and it added some complexity that I wasn't ready to deal with for a personal site.
 
 I came across this framework called [Next.js](https://github.com/zeit/next.js/). I was immediately seduced by the way it proposes to do things. Additionally it provides a complete deployment workflow which takes away the hassle of configuring all that. Thank you to the folks at [Zeit](https://zeit.co/), your work is phenomenal. As I don't wish to spend all my time working on my website, I felt the switch would make my life easier. Hopefully this decision will last a little while.
 
