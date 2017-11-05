@@ -37,7 +37,7 @@ env:
     secure: <this is your encrypted NOW token. It was added when you ran travis encrypt in #3>
 ```
 
-5. Create a file named ``` now.json ``` and add the following information tailored to your site information. This is used to run the alias command and point your domain to the correct deployment: 
+5. Create a file named ``` now.json ``` and add the following information tailored to your site information. This is used to run the alias command and point your domain to the correct deployment. Alternatively you can create a ```now``` property in your ```package.json```: 
 
 ```JSON
 {
