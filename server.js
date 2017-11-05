@@ -11,7 +11,8 @@ const {
   getPost,
   getTags,
   getPostsTaggedWith,
-  getProjects
+  getProjects,
+  getProject
 } = require('./lib/getPosts');
 
 app.prepare().then(() => {
@@ -20,6 +21,14 @@ app.prepare().then(() => {
   // API endpoints
   server.get('/api/posts', (req, res) => {
     res.json(getPosts());
+  });
+  server.get('/api/posts/:number', (req, res) => {
+    const post = getPost(req.params.number);
+    if (post) {
+      res.json(post);
+      return;
+    }
+    res.status(404).json({ message: 'Sorry not found' });
   });
   server.get('/api/tags', (req, res) => {
     res.json(getTags());
@@ -32,16 +41,17 @@ app.prepare().then(() => {
     }
     res.status(404).json({ message: 'Sorry not found' });
   });
-  server.get('/api/posts/:number', (req, res) => {
-    const post = getPost(req.params.number);
-    if (post) {
-      res.json(post);
+
+  server.get('/api/projects', (req, res) => {
+    res.json(getProjects());
+  });
+  server.get('/api/project/:project', (req, res) => {
+    const project = getProject(req.params.project);
+    if (project) {
+      res.json(project);
       return;
     }
     res.status(404).json({ message: 'Sorry not found' });
-  });
-  server.get('/api/projects', (req, res) => {
-    res.json(getProjects());
   });
   // Define other pages here
   server.get('/static', (req, res) => {

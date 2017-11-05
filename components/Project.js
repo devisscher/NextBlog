@@ -9,10 +9,7 @@ export default class Project extends React.Component {
     const { project } = this.props;
     return (
       <div>
-        <a
-          className="project__link"
-          href={`/blog/project/${project.displayNumber}/${slug(project.title)}`}
-        >
+        <a className="project__link" href={`/projects/${slug(project.title)}`}>
           <h3
             style={{ paddingBottom: 0, marginBottom: 0 }}
             className="project__title"

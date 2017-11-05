@@ -14,6 +14,11 @@ const routes = [
     page: 'tags/tag',
     prettyUrl: ({ tag = '' }) => `/tags/${tag}`,
     prettyUrlPatterns: [{ pattern: '/tags/:tag' }]
+  },
+  {
+    page: 'projects/project',
+    prettyUrl: ({ project = '' }) => `/projects/${project}`,
+    prettyUrlPatterns: [{ pattern: '/projects/:project' }]
   }
 ];
 
