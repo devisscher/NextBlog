@@ -16,10 +16,10 @@ I came across this framework called [Next.js](https://github.com/zeit/next.js/).
 
 Deployment with [Now.sh](https://now.sh) is a breeze but you might want to automate it. Here is how I achieved it for this website using Git and Travis. Every time I push or merge to the master branch a new deployment is initiated in Travis.
 
-1. You need to get credentials from Zeit: https://zeit.co/account/tokens take note of this we will need it later. 
-2. Create a ```.travis.yml``` file.
-3. Generate secure variables for your Zeit token by running the following command. (You need to install [The Travis Client](https://github.com/travis-ci/travis.rb#installation)): ```travis encrypt -r <username>/<repo> NOW_TOKEN=xxxxxxxxxxxxxxxxxxxxxxx --add```
-4. Now open your ```.travis.yml``` file and add the following:
+* You need to get credentials from Zeit: https://zeit.co/account/tokens take note of this we will need it later. 
+* Create a ```.travis.yml``` file.
+* Generate secure variables for your Zeit token by running the following command. (You need to install [The Travis Client](https://github.com/travis-ci/travis.rb#installation)): ```travis encrypt -r <username>/<repo> NOW_TOKEN=xxxxxxxxxxxxxxxxxxxxxxx --add```
+* Now open your ```.travis.yml``` file and add the following:
 
 ```YAML
 language: node_js
@@ -33,7 +33,7 @@ env:
     secure: <this is your encrypted NOW token. It was added when you ran travis encrypt in #3>
 ```
 
-5. Open your ```package.json``` file and add the following information tailored to your site information. This is used to run the alias command and point your domain to the correct deployment. (You could also put this in a ```now.json``` file): 
+* Open your ```package.json``` file and add the following information tailored to your site information. This is used to run the alias command and point your domain to the correct deployment. (You could also put this in a ```now.json``` file): 
 
 ```JSON
 {
@@ -46,7 +46,7 @@ env:
 }
 ```
 
-6. Open your ```package.json``` file and add the following 2 scripts. These are used in your Travis config. The first is to deploy and the second will be used to alias your latest deploy: 
+* Open your ```package.json``` file and add the following 2 scripts. These are used in your Travis config. The first is to deploy and the second will be used to alias your latest deploy: 
 
 ```JSON
 {
@@ -59,7 +59,7 @@ env:
 }
 ```
 
-7. Test it out by committing your code to Github.
+* Test it out by committing your code to Github.
 
 If you want more info about deployments and setting up Travis with [Now.sh](https://now.sh) check out this article: https://zeit.co/blog/now-json.
 
