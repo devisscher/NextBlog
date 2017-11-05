@@ -18,7 +18,12 @@ Well, Gatsby was nice, but I didn't feel great about it. No offense to anyone wh
 
 ## Deployment
 
-Deployment with Now.sh is a breeze but you might want to automate. Here is how I achieved it for this website using Git and Travis.
+Deployment with Now.sh is a breeze but you might want to automate. Here is how I achieved it for this website using Git and Travis. Every time I push or merge to the master branch a new deployment is initiated in Travis.
+
+1. You need to get credentials from Zeit: https://zeit.co/account/tokens take note of this we will need it later. 
+2. Create a ```.travis.yml``` file.
+3. Generate secure variables for your Zeit token by running the following command. (You need to install Travis CLI tools): ```travis encrypt -r <username>/<repo> NOW_TOKEN=xxxxxxxxxxxxxxxxxxxxxxx --add```
+
 
 Again this is a WIP as are all my blogs and websites. Changing platforms is a recurring theme so here is a list of posts which talk about my older sites.
 
