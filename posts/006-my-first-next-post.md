@@ -25,7 +25,7 @@ Deployment with Now.sh is a breeze but you might want to automate. Here is how I
 3. Generate secure variables for your Zeit token by running the following command. (You need to install Travis CLI tools): ```travis encrypt -r <username>/<repo> NOW_TOKEN=xxxxxxxxxxxxxxxxxxxxxxx --add```
 4. Now open your ```.travis.yml``` file and add the following:
 
-```
+```YAML
 language: node_js
 node_js:
   - "node"
@@ -39,13 +39,27 @@ env:
 
 5. Create a file named ``` now.json ``` and add the following information tailored to your site information. This is used to run the alias command and point your domain to the correct deployment: 
 
-```
+```JSON
 {
   "name": "tdevisscher",
   "alias": ["tdevisscher.com"]
 }
 ```
 
+6. Open your ```package.json``` file and add the following 2 scripts. These are used in your Travis config. The first is to deploy and the second will be used to alias your latest deploy: 
+
+```JSON
+{
+...
+"scripts": {
+...
+    "deploy": "now -e NODE_ENV=production --token $NOW_TOKEN --npm",
+    "alias": "now alias --token $NOW_TOKEN"
+    }
+}
+```
+
+7. Test it out by commiting your code to Github
 
 Again this is a WIP as are all my blogs and websites. Changing platforms is a recurring theme so here is a list of posts which talk about my older sites.
 

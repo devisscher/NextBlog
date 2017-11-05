@@ -7,7 +7,7 @@
     "start": "node server.js",
     "build": "next build",
     "deploy": "now -e NODE_ENV=production --token $NOW_TOKEN --npm",
-    "alias": "now alias --token $NOW_TOKEN"
+    "alias": "now alias --token=$NOW_TOKEN"
   },
   "keywords": [],
   "author": "",
