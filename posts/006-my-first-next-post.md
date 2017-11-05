@@ -18,7 +18,7 @@ Deployment with [Now.sh](https://now.sh) is a breeze but you might want to autom
 
 1. You need to get credentials from Zeit: https://zeit.co/account/tokens take note of this we will need it later. 
 2. Create a ```.travis.yml``` file.
-3. Generate secure variables for your Zeit token by running the following command. (You need to install [The Travis Client](https://github.com/travis-ci/travis.rb#installation)): ```travis encrypt -r <username>/<repo> NOW_TOKEN=xxxxxxxxxxxxxxxxxxxxxxx --add```
+3. Generate secure variables for your Zeit token by running the following command. (You need to install [The Travis Client](https://github.com/travis-ci/travis.rb#installation)): ```travis encrypt -r NOW_TOKEN=xxxxxxxxxxxxxxxxxxxxxxx --add```
 4. Now open your ```.travis.yml``` file and add the following:
 
 ```YAML
