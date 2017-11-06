@@ -8,12 +8,12 @@
     "alias": "tdevisscher.com",
     "env": {
       "NODE_ENV": "production",
-      "TWITTER_KEY": "@TWITTER_KEY"
+      "TWITTER_KEY": "@twitter_key"
     }
   },
   "scripts": {
     "test": "jest",
-    "start": "NODE_ENV=development node server.js",
+    "start": "node server.js",
     "build": "next build",
     "deploy": "now --token $NOW_TOKEN --npm",
     "alias": "now alias --token=$NOW_TOKEN"
