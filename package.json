@@ -5,7 +5,8 @@
   "main": "index.js",
   "now": {
     "name": "tdevisscher",
-    "alias": "tdevisscher.com"
+    "alias": "tdevisscher.com",
+    "env": "--dotenv"
   },
   "scripts": {
     "start": "node server.js",
