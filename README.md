@@ -5,3 +5,4 @@ Built with Next.js and inspired by [Syntax.fm](https://syntax.fm) website built 
 # WIP
 
 This is a work in progress.
+
