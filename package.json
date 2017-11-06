@@ -12,7 +12,7 @@
     "start": "NODE_ENV=development node server.js",
     "build": "next build",
     "deploy":
-      "now -e NODE_ENV=production -e TWITTER_KEY=$TWITTER_KEY --token $NOW_TOKEN --npm",
+      "now -e NODE_ENV=production -e TWITTER_KEY="$TWITTER_KEY" --token $NOW_TOKEN --npm",
     "alias": "now alias --token=$NOW_TOKEN"
   },
   "keywords": [],
