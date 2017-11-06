@@ -2,6 +2,7 @@ const express = require('express');
 const next = require('next');
 const Router = require('./routes').Router;
 const path = require('path');
+const cron = require('node-cron');
 const dev = process.env.NODE_ENV !== 'production';
 const port = parseInt(process.env.PORT, 10) || 3000;
 const app = next({ dev });
@@ -14,6 +15,7 @@ const {
   getProjects,
   getProject
 } = require('./lib/getPosts');
+const { likeTweets } = require('./lib/likeTweets');
 
 app.prepare().then(() => {
   const server = express();
@@ -58,6 +60,10 @@ app.prepare().then(() => {
     res.sendFile(path.join(__dirname + '/static/index.html'));
   });
 
+  cron.schedule('0 * * * *', function() {
+    console.log('running a task every minute');
+    likeTweets();
+  });
   // Custom Next.js URLs
   Router.forEachPattern((page, pattern, defaultParams) => {
     server.get(pattern, (req, res) => {
