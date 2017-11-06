@@ -8,10 +8,11 @@
     "alias": "tdevisscher.com"
   },
   "scripts": {
+    "test": "jest",
     "start": "NODE_ENV=development node server.js",
     "build": "next build",
     "deploy":
-      "now -e NODE_ENV=production -e TWITTER_KEY=$TWITTER_KEY --token $NOW_TOKEN --npm --debug",
+      "now -e NODE_ENV=production -e TWITTER_KEY=$TWITTER_KEY --token $NOW_TOKEN --npm",
     "alias": "now alias --token=$NOW_TOKEN"
   },
   "keywords": [],
@@ -46,6 +47,7 @@
   },
   "devDependencies": {
     "file-loader": "^1.1.5",
+    "jest": "^21.2.1",
     "now-travis": "^1.1.0",
     "url-loader": "^0.6.2"
   }
