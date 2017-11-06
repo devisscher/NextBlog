@@ -6,18 +6,17 @@
   "now": {
     "name": "tdevisscher",
     "alias": "tdevisscher.com",
-    "env":{
-      "TWITTER_KEY":"$TWITTER_KEY",
-      "TWITTER_SECRET":"$TWITTER_SECRET",
-      "TWITTER_ACCESS_TOKEN":"$TWITTER_ACCESS_TOKEN",
-      "TWITTER_TOKEN_SECRET":"$TWITTER_TOKEN_SECRET"
-    }}
+    "env": {
+      "TWITTER_KEY": "$TWITTER_KEY",
+      "TWITTER_SECRET": "$TWITTER_SECRET",
+      "TWITTER_ACCESS_TOKEN": "$TWITTER_ACCESS_TOKEN",
+      "TWITTER_TOKEN_SECRET": "$TWITTER_TOKEN_SECRET"
+    }
   },
   "scripts": {
     "start": "node server.js",
     "build": "next build",
-    "deploy":
-      "now -e NODE_ENV=production  --token $NOW_TOKEN --npm",
+    "deploy": "now -e NODE_ENV=production --token $NOW_TOKEN --npm",
     "alias": "now alias --token=$NOW_TOKEN"
   },
   "keywords": [],
