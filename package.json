@@ -10,8 +10,7 @@
   "scripts": {
     "start": "node server.js",
     "build": "next build",
-    "deploy":
-      "now -e NODE_ENV=production -e TWITTER_KEY=$TWITTER_KEY -e TWITTER_SECRET=$TWITTER_SECRET -e TWITTER_ACCESS_TOKEN=$TWITTER_ACCESS_TOKEN -e TWITTER_TOKEN_SECRET=$TWITTER_TOKEN_SECRET  --token $NOW_TOKEN --npm --debug",
+    "deploy": "now -e NODE_ENV=production --token $NOW_TOKEN --npm --debug",
     "alias": "now alias --token=$NOW_TOKEN"
   },
   "keywords": [],
