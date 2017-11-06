@@ -4,7 +4,7 @@ import Posts from '../components/Posts';
 
 import Layout from '../components/Layout';
 
-import { environment } from '../lib/environment';
+import { environment, twitter } from '../lib/environment';
 
 export default class Index extends React.Component {
   constructor(props) {
@@ -26,6 +26,7 @@ export default class Index extends React.Component {
     return (
       <Layout>
         <h2>Home {environment}</h2>
+        <p>{twitter.key}</p>
         <Posts posts={posts} />
       </Layout>
     );
