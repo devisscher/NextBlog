@@ -27,7 +27,7 @@ node_js:
   - "node"
 cache: npm
 script: npm run deploy
-after_script: now alias -t $NOW_TOKEN
+after_script: npm run alias
 env:
   global:
     secure: <this is your encrypted NOW token. It was added when you ran travis encrypt in #3>
