@@ -5,14 +5,17 @@
   "main": "index.js",
   "now": {
     "name": "tdevisscher",
-    "alias": "tdevisscher.com"
+    "alias": "tdevisscher.com",
+    "env": {
+      "NODE_ENV": "production",
+      "TWITTER_KEY": "@TWITTER_KEY"
+    }
   },
   "scripts": {
     "test": "jest",
     "start": "NODE_ENV=development node server.js",
     "build": "next build",
-    "deploy":
-      "now -e NODE_ENV=production -e TWITTER_KEY="$TWITTER_KEY" --token $NOW_TOKEN --npm",
+    "deploy": "now --token $NOW_TOKEN --npm",
     "alias": "now alias --token=$NOW_TOKEN"
   },
   "keywords": [],
