@@ -4,6 +4,8 @@ import Posts from '../components/Posts';
 
 import Layout from '../components/Layout';
 
+import { environment } from '../lib/environment';
+
 export default class Index extends React.Component {
   constructor(props) {
     super();
@@ -23,7 +25,7 @@ export default class Index extends React.Component {
     const { posts = [], baseURL } = this.props;
     return (
       <Layout>
-        <h2>Home</h2>
+        <h2>Home {environment}</h2>
         <Posts posts={posts} />
       </Layout>
     );
