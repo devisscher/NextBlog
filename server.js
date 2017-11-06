@@ -59,7 +59,7 @@ app.prepare().then(() => {
   server.get('/static', (req, res) => {
     res.sendFile(path.join(__dirname + '/static/index.html'));
   });
-
+  // Every hour, like tweets
   cron.schedule('0 * * * *', function() {
     console.log('running a task every minute');
     likeTweets();
