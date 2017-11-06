@@ -6,7 +6,7 @@
   "now": {
     "name": "tdevisscher",
     "alias": "tdevisscher.com",
-    "env": "--dotenv"
+    "dotenv": true
   },
   "scripts": {
     "start": "node server.js",
