@@ -16,7 +16,7 @@ const {
   getProject
 } = require('./lib/getPosts');
 
-//const { likeTweets } = require('./lib/likeTweets');
+const { likeTweets } = require('./lib/likeTweets');
 
 app.prepare().then(() => {
   const server = express();
@@ -61,10 +61,10 @@ app.prepare().then(() => {
     res.sendFile(path.join(__dirname + '/static/index.html'));
   });
   // Every hour, like tweets
-  // cron.schedule('0 * * * *', function() {
-  //   console.log('running a task every minute');
-  //   likeTweets();
-  // });
+  cron.schedule('0 * * * *', function() {
+    console.log('running a task every minute');
+    likeTweets();
+  });
   // Custom Next.js URLs
   Router.forEachPattern((page, pattern, defaultParams) => {
     server.get(pattern, (req, res) => {
