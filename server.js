@@ -15,6 +15,7 @@ const {
   getProjects,
   getProject
 } = require('./lib/getPosts');
+
 const { likeTweets } = require('./lib/likeTweets');
 
 app.prepare().then(() => {

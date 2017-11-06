@@ -11,7 +11,7 @@
     "start": "node server.js",
     "build": "next build",
     "deploy":
-      "now -e TWITTER_KEY=$TWITTER_KEY -e TWITTER_SECRET=$TWITTER_SECRET -e TWITTER_ACCESS_TOKEN=$TWITTER_ACCESS_TOKEN -e TWITTER_TOKEN_SECRET=$TWITTER_TOKEN_SECRET  --token $NOW_TOKEN --npm",
+      "now -e TWITTER_KEY=$TWITTER_KEY -e TWITTER_SECRET=$TWITTER_SECRET -e TWITTER_ACCESS_TOKEN=$TWITTER_ACCESS_TOKEN -e TWITTER_TOKEN_SECRET=$TWITTER_TOKEN_SECRET  --token $NOW_TOKEN --npm --debug",
     "alias": "now alias --token=$NOW_TOKEN"
   },
   "keywords": [],
