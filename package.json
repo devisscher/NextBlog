@@ -5,13 +5,7 @@
   "main": "index.js",
   "now": {
     "name": "tdevisscher",
-    "alias": "tdevisscher.com",
-    "env": [
-      "TWITTER_KEY",
-      "TWITTER_SECRET",
-      "TWITTER_ACCESS_TOKEN",
-      "TWITTER_TOKEN_SECRET"
-    ]
+    "alias": "tdevisscher.com"
   },
   "scripts": {
     "start": "node server.js",
