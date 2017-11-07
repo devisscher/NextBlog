@@ -26,7 +26,6 @@ export default class Index extends React.Component {
     return (
       <Layout>
         <h2>Home {environment}</h2>
-        <p>{twitter.key}</p>
         <Posts posts={posts} />
       </Layout>
     );
