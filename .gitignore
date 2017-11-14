@@ -2,3 +2,4 @@ node_modules
 .next
 static/config.js
 .env
+npm-debug.log
