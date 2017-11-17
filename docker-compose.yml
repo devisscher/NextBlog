@@ -2,7 +2,7 @@ version: '2'
 services:
   web:
     build: .
-    container_name: tweetbot
+    container_name: tdblog
     environment:
       - NODE_ENV=production
     ports:
