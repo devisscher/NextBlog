@@ -1,6 +1,7 @@
 ---
 date: 1509647267333
 title: "My first Next post"
+file: "006-my-first-next-post.md"
 number: 006
 draft: false
 tags: 

@@ -1,6 +1,7 @@
 ---
 date: 1502989953962
 title: "My first gatsby post"
+file: "004-my-first-gatsby-post.md"
 number: 004
 draft: false
 tags: 

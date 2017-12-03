@@ -1,6 +1,7 @@
 ---
 date: 1511809858708
 title: "Starting a new job"
+file: "007-new-job.md"
 number: 007
 draft: true
 tags: 

@@ -1,5 +1,6 @@
 ---
 title:  "Collaborative projects"
+file: "003-2016-09-10-collaborative-projects.md"
 date:   1500195600000
 number: 003
 draft: false

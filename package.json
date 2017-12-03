@@ -2,6 +2,10 @@
   "name": "nextblog",
   "version": "1.0.0",
   "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devisscher/blog.git"
+  },
   "main": "index.js",
   "now": {
     "name": "tdevisscher",

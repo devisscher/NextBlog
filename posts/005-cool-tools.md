@@ -1,5 +1,6 @@
 ---
 title: "Cool Tools"
+file: "005-cool-tools.md"
 date: 1507453200000
 number: 005
 draft: false

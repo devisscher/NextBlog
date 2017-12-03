@@ -79,4 +79,6 @@ app.prepare().then(() => {
   // everything else
   server.get('*', (req, res) => handle(req, res));
   server.listen(port);
+  console.log(process.env.npm_package_repository_url)
+
 });

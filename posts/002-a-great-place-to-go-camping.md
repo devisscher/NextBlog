@@ -1,5 +1,6 @@
 ---
 title: "A great place to go camping!"
+file: "002-a-great-place-to-go-camping.md"
 date: 1467450000000
 number: 002
 draft: false
