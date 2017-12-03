@@ -2,6 +2,7 @@
 date: 1502989953962
 title: "My first gatsby post"
 number: 004
+draft: false
 tags: 
     - Blog
     - JavaScript

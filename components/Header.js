@@ -93,14 +93,14 @@ export default class Header extends React.Component {
                 color: 'white'
               }}
             >
-              <Link>
+              <Link href="">
                 <Anchor className={activeClass === link.slug ? 'active' : ''}>
                   {link.name}
                 </Anchor>
               </Link>
               <div className="dropdown-content">
-                {link.sub.map(sub => (
-                  <Link href={sub.url}>
+                {link.sub.map((sub, index) => (
+                  <Link href={sub.url} key={index}>
                     <Anchor
                       className={activeClass === sub.slug ? 'active' : ''}
                       style={{ color: '#9b4dca', display: 'block' }}

@@ -2,6 +2,7 @@
 title:  "Collaborative projects"
 date:   1500195600000
 number: 003
+draft: false
 tags: 
     - Projects
 --- 

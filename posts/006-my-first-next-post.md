@@ -2,6 +2,7 @@
 date: 1509647267333
 title: "My first Next post"
 number: 006
+draft: false
 tags: 
     - Blog
     - JavaScript
@@ -62,6 +63,9 @@ env:
 * Test it out by committing your code to Github.
 
 If you want more info about deployments and setting up Travis with [Now.sh](https://now.sh) check out this article: https://zeit.co/blog/now-json.
+
+You can read the article above [here](https://zeit.co/docs/examples/travis).
+
 
 ## Some cool things to mention about Next and this site
 

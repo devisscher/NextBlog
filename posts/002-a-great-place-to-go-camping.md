@@ -2,6 +2,7 @@
 title: "A great place to go camping!"
 date: 1467450000000
 number: 002
+draft: false
 url: 
 tags: 
     - Adventure
