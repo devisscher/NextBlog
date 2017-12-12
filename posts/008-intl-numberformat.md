@@ -3,7 +3,7 @@ date: 1512572774105
 title: "JavaScript: Intl.NumberFormat"
 file: "007-intl-numberformat.md"
 number: 008
-draft: false
+draft: true
 tags: 
     - JavaScript
 ---
