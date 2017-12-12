@@ -1,14 +1,30 @@
+import React from 'react'
 import Header from './Header';
 import Meta from '../components/meta';
 import Footer from '../components/Footer';
+import axios from 'axios';
 
-const Layout = props => (
-  <div>
-    <Meta />
-    <Header />
-    <div className="page">{props.children}</div>
-    <Footer />
-  </div>
-);
+export default class Layout extends React.Component {
+  constructor(props) {
+    super();
+    this.state = {
+      active: 'home'
+    };
+  }
+  componentDidMount() {
 
-export default Layout;
+  }
+
+  render() {
+    return (
+      <div>
+        <Meta />
+        <Header />
+        <div className="page">
+          {this.props.children}
+        </div>
+        <Footer />
+      </div>
+    )
+  }
+}

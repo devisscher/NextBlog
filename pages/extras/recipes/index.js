@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import Projects from '../../components/Projects';
+import Projects from '../../../components/Projects';
 
-import Layout from '../../components/Layout';
+import Layout from '../../../components/Layout';
 // Test
 export default class Index extends React.Component {
   constructor(props) {
@@ -16,16 +16,16 @@ export default class Index extends React.Component {
     const baseURL = req
       ? `${protocol}://${req.headers.host}`
       : window.location.origin;
-    const { data: projects } = await axios.get(`${baseURL}/api/projects`);
-    return { projects, baseURL };
+    const { data: recipes } = await axios.get(`${baseURL}/api/recipes`);
+    return { recipes, baseURL };
   }
   render() {
-    const { projects = [], baseURL } = this.props;
+    const { recipes = [], baseURL } = this.props;
     return (
       <Layout>
-        <h2>Projects</h2>
-        <p>A non exhaustive list of projects I've completed.</p>
-        <Projects projects={projects} type="projects" />
+        <h2>Recipes</h2>
+        <p>A non exhaustive list of recipes I enjoy making.</p>
+        <Projects projects={recipes} type="recipes" />
       </Layout>
     );
   }

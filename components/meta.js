@@ -1,6 +1,8 @@
+import React from 'react'
 import Head from 'next/head';
 import stylesheet from '../styles/style.scss';
 import slug from 'speakingurl';
+import axios from 'axios';
 
 export default ({ post, baseURL }) => (
   <div>
@@ -26,6 +28,7 @@ export default ({ post, baseURL }) => (
       <style
         dangerouslySetInnerHTML={{ __html: stylesheet.replace(/\n/g, '') }}
       />
+
     </Head>
   </div>
 );

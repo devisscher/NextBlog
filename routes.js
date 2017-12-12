@@ -20,6 +20,12 @@ const routes = [
     prettyUrl: ({ project = '' }) => `/projects/${project}`,
     prettyUrlPatterns: [{ pattern: '/projects/:project' }]
   }
+  ,
+  {
+    page: 'extras/recipes/recipe',
+    prettyUrl: ({ recipe = '' }) => `/extras/recipes/${recipe}`,
+    prettyUrlPatterns: [{ pattern: '/extras/recipes/:recipe' }]
+  }
 ];
 
 const urlPrettifier = new UrlPrettifier(routes);

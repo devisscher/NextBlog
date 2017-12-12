@@ -11,7 +11,7 @@ tags:
 
 After a few years as a developer I finally landed a job at a software company. I've had the opportunity to work for public and para-public institutions and in these roles I learned a lot about software development. The main take away for me is how much work there is in software. 
 
-What is the difference between working for a software company and a public institution or company who's mandate isn't solely based in software and technology?
+But what is the difference between working for a software company and a public institution or company who's mandate isn't solely based in software and technology?
 
 1. As stated, the mandate is different. Software development isn't the main focus for public institutions, they take care of things like finding a cure for cancer and protecting citizens from crime. Naturally, technology isn't the top priority.
 

@@ -9,7 +9,7 @@ export default class Extras extends React.Component {
       information: {}
     };
   }
-  componentDidMount() {}
+  componentDidMount() { }
   render() {
     console.log(this.state.information);
     return (
@@ -35,6 +35,11 @@ export default class Extras extends React.Component {
           <li>
             <Link href="/extras/booket-list">
               <a>Booket List</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/extras/recipes">
+              <a>Recipe Book</a>
             </Link>
           </li>
         </ul>

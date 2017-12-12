@@ -13,7 +13,6 @@ export default class Post extends React.Component {
           className="post__link"
           href={`/blog/post/${post.displayNumber}/${slug(post.title)}`}
         >
-          <span className="post__displayNumber"># {post.displayNumber}</span>
           <h3
             style={{ paddingBottom: 0, marginBottom: 0 }}
             className="post__title"

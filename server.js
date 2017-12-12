@@ -13,7 +13,9 @@ const {
   getTags,
   getPostsTaggedWith,
   getProjects,
-  getProject
+  getProject,
+  getRecipes,
+  getRecipe
 } = require('./lib/getPosts');
 
 //const { likeTweets } = require('./lib/likeTweets');
@@ -22,9 +24,11 @@ app.prepare().then(() => {
   const server = express();
 
   // API endpoints
+  // Get Posts
   server.get('/api/posts', (req, res) => {
     res.json(getPosts());
   });
+  // Get post
   server.get('/api/posts/:number', (req, res) => {
     const post = getPost(req.params.number);
     if (post) {
@@ -33,9 +37,11 @@ app.prepare().then(() => {
     }
     res.status(404).json({ message: 'Sorry not found' });
   });
+  // Get tags
   server.get('/api/tags', (req, res) => {
     res.json(getTags());
   });
+  // Get tag
   server.get('/api/tag/:tag', (req, res) => {
     const tag = getPostsTaggedWith(req.params.tag);
     if (tag) {
@@ -44,8 +50,9 @@ app.prepare().then(() => {
     }
     res.status(404).json({ message: 'Sorry not found' });
   });
-
+  // Get projects
   server.get('/api/projects', (req, res) => {
+    console.log('got projects')
     res.json(getProjects());
   });
   server.get('/api/project/:project', (req, res) => {
@@ -56,10 +63,28 @@ app.prepare().then(() => {
     }
     res.status(404).json({ message: 'Sorry not found' });
   });
+  // Get recipes
+  server.get('/api/recipes', (req, res) => {
+    console.log('got projects')
+    res.json(getRecipes());
+  });
+  server.get('/api/recipe/:recipe', (req, res) => {
+    const recipe = getRecipe(req.params.recipe);
+    if (recipe) {
+      res.json(recipe);
+      return;
+    }
+    res.status(404).json({ message: 'Sorry not found' });
+  });
+  server.all('*', (req, res, next) => {
+    console.log(req.hostname)
+    next()
+  })
   // Define other pages here
   server.get('/static', (req, res) => {
     res.sendFile(path.join(__dirname + '/static/index.html'));
   });
+  server.use(express.static('node_modules/react-ga'))
   // Every hour, like tweets
   // cron.schedule('0 * * * *', function() {
   //   console.log('running a task every minute');

@@ -1,3 +1,4 @@
+import React from 'react'
 import Link from 'next/link';
 
 import glamorous from 'glamorous';
@@ -112,12 +113,12 @@ export default class Header extends React.Component {
               </div>
             </span>
           ) : (
-            <Link href={link.url}>
-              <Anchor className={activeClass === link.slug ? 'active' : ''}>
-                {link.name}
-              </Anchor>
-            </Link>
-          )}
+              <Link href={link.url}>
+                <Anchor className={activeClass === link.slug ? 'active' : ''}>
+                  {link.name}
+                </Anchor>
+              </Link>
+            )}
         </span>
       ));
       return <div className="links">{listItems}</div>;

@@ -4,10 +4,10 @@ file: "002-a-great-place-to-go-camping.md"
 date: 1467450000000
 number: 002
 draft: false
-url: 
 tags: 
     - Adventure
 ---
+
 I recently had the opportunity to visit a great camping spot ⛺. The place is called Lac Poisson Blanc and for those of you who may be interested here are some details about the weekend. 
 
 
@@ -27,6 +27,3 @@ We were quite happy with our weekend, our campsite was beside a huge cliff, it h
 [Lac Poisson Blanc (Reservations)](http://poissonblanc.ca/en/ "Lac Poisson Blanc's home page")
 
 [Camp Air Eau Bois' (Parking and Canoe rentals)](http://www.aireaubois.com/fr/services  "Lac Poisson Blanc's home page")
-
-
-
