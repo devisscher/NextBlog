@@ -11,7 +11,6 @@ export default class Extras extends React.Component {
   }
   componentDidMount() { }
   render() {
-    console.log(this.state.information);
     return (
       <Layout>
         <h2>Extras</h2>

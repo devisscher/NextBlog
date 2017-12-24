@@ -52,7 +52,6 @@ app.prepare().then(() => {
   });
   // Get projects
   server.get('/api/projects', (req, res) => {
-    console.log('got projects')
     res.json(getProjects());
   });
   server.get('/api/project/:project', (req, res) => {
@@ -65,7 +64,6 @@ app.prepare().then(() => {
   });
   // Get recipes
   server.get('/api/recipes', (req, res) => {
-    console.log('got projects')
     res.json(getRecipes());
   });
   server.get('/api/recipe/:recipe', (req, res) => {
@@ -77,7 +75,7 @@ app.prepare().then(() => {
     res.status(404).json({ message: 'Sorry not found' });
   });
   server.all('*', (req, res, next) => {
-    console.log(req.hostname)
+    //console.log(req.hostname)
     next()
   })
   // Define other pages here
@@ -104,6 +102,6 @@ app.prepare().then(() => {
   // everything else
   server.get('*', (req, res) => handle(req, res));
   server.listen(port);
-  console.log(process.env.npm_package_repository_url)
+  // console.log(process.env.npm_package_repository_url)
 
 });

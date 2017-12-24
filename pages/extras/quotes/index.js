@@ -13,10 +13,9 @@ export default class Quotes extends React.Component {
     axios
       .get('https://api.tdevisscher.ca/quotes')
       .then(response => {
-        console.log(response);
         this.setState({ results: response.data.quotes });
       })
-      .catch(function(error) {
+      .catch(function (error) {
         console.log(error);
       });
   }

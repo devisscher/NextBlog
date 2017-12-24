@@ -5,6 +5,7 @@ import format from 'date-fns/format';
 import glamorous from 'glamorous';
 import Link from 'next/link';
 import Layout from '../../../components/Layout';
+import { Url } from '../../../lib/url';
 
 const Tag = glamorous.a({
   display: 'inline-block',
@@ -27,17 +28,10 @@ export default class RecipePage extends React.Component {
     super();
   }
   static async getInitialProps({ req }) {
-    //const { query, params } = query;
-    //return params.id;
-    console.log('>> params are: ', req.params, req.query, '\naaa\n');
-    // console.log('referer', urlSplit);
-    // console.log('projectId', projectId);
     const protocol =
       req && req.headers.host.indexOf('localhost') > -1
         ? 'http'
         : req ? req.protocol : '';
-    // const urlSplit = window.location.href.split('/');
-    // const projectId = urlSplit[urlSplit.length - 2];
     const baseURL = req
       ? `${protocol}://${req.headers.host}`
       : window.location.origin;
@@ -60,6 +54,7 @@ export default class RecipePage extends React.Component {
     return (
       <Layout>
         <h1>{recipe.title}</h1>
+        <Url />
         <small style={{ paddingTop: 0 }}>
           {format(parseFloat(recipe.date), 'MMM Do, YYYY')}
         </small>
