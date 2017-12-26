@@ -1,6 +1,7 @@
 import React from 'react';
 import glamorous from 'glamorous';
 
+
 const List = glamorous.ul({
   listStyle: 'none',
   position: 'relative',
@@ -60,6 +61,7 @@ const Footer = () => (
       width: '100vw'
     }}
   >
+
     <hr />
     <p>
       <small>

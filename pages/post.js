@@ -10,7 +10,7 @@ const Tag = glamorous.a({
   display: 'inline-block',
   textTransform: 'uppercase',
   fontWeight: 500,
-  margin: '3px',
+  marginRight: '3px',
   fontSize: '1rem',
   padding: '0px 5px',
   color: '#fff',
@@ -58,11 +58,11 @@ export default class PostPage extends React.Component {
     }
     return (
       <Layout>
-        <h1>{post.title}</h1>
-        <TagsList tags={post.tags} />
+        <h2 className="page-header">{post.title}</h2>
         <small style={{ paddingTop: 0 }}>
           {format(parseFloat(post.date), 'MMM Do, YYYY')}
         </small>
+        <TagsList tags={post.tags} />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <a href={filePath + post.file}>Typo or correction? Submit a PR :)</a>
       </Layout>

@@ -13,7 +13,7 @@ export default class Extras extends React.Component {
   render() {
     return (
       <Layout>
-        <h2>Extras</h2>
+        <h2 className="page-header">Extras</h2>
         <p>Little projects that aren't really blog posts</p>
         <ul>
           <li>

@@ -3,7 +3,6 @@ import Head from 'next/head';
 import stylesheet from '../styles/style.scss';
 import slug from 'speakingurl';
 import ReactGA from 'react-ga';
-import AdSense from 'react-adsense';
 import axios from 'axios';
 
 export default class Meta extends React.Component {
@@ -51,10 +50,7 @@ export default class Meta extends React.Component {
             {ReactGA.initialize('UA-110816894-1', { debug: true })}
             {ReactGA.pageview(this.state.pathName, this.state.search)}
           </script>
-          <AdSense.Google client='ca-pub-8615534749322314'
-            slot=''
-            style={{ width: 500, height: 300, background: 'red' }}
-            format='' />
+
         </Head>
       </div>)
   }

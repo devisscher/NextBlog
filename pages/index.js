@@ -22,10 +22,10 @@ export default class Index extends React.Component {
     return { posts, baseURL };
   }
   render() {
-    const { posts = [], baseURL } = this.props;
+    const { posts = [] } = this.props;
     return (
       <Layout>
-        <h2>Home</h2>
+        <h2 className="page-header">Home</h2>
         <Posts posts={posts} />
       </Layout>
     );

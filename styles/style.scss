@@ -13,6 +13,15 @@ $divider-color: #bdbdbd;
 $break-small: 375px;
 $break-large: 1200px;
 // Global
+
+h1, h2 {
+  text-transform: uppercase;
+}
+
+h2.page-header {
+  border-bottom: 1px solid #757575;
+}
+
 body {
   margin: 0;
 }
