@@ -4,8 +4,6 @@ import Posts from '../components/Posts';
 
 import Layout from '../components/Layout';
 
-import { environment, twitter } from '../lib/environment';
-
 export default class Index extends React.Component {
   constructor(props) {
     super();
@@ -22,9 +20,9 @@ export default class Index extends React.Component {
     return { posts, baseURL };
   }
   render() {
-    const { posts = [] } = this.props;
+    const { posts = [], baseURL } = this.props;
     return (
-      <Layout>
+      <Layout baseURL={baseURL}>
         <h2 className="page-header">Home</h2>
         <Posts posts={posts} />
       </Layout>

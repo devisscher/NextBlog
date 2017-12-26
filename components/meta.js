@@ -9,8 +9,6 @@ export default class Meta extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      post: this.props.post,
-      baseURL: this.props.baseURL,
       pathName: '',
       search: ''
     }
@@ -21,7 +19,7 @@ export default class Meta extends React.Component {
     this.setState({ search: window.location.search })
   }
   render() {
-
+    const { baseURL } = this.props;
     return (
       <div>
         <Head>
@@ -33,7 +31,7 @@ export default class Meta extends React.Component {
             property="og:description"
             content="Thomas Devisscher lives and works in Ottawa, Canada building JavaScript and Python things. You should follow him."
           />
-          <meta property="og:url" content="https://tdevisscher.com" />
+          <meta property="og:url" content={baseURL} />
           <meta
             property="og:image"
             content={`https://s3.amazonaws.com/tdevisscher-images/collaborative-projects/td.png`}

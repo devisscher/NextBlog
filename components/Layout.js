@@ -7,15 +7,17 @@ import AdSense from 'react-adsense';
 
 export default class Layout extends React.Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
       active: 'home'
     };
   }
   render() {
+    const { baseURL } = this.props;
     return (
+
       <div>
-        <Meta />
+        <Meta baseURL={baseURL} />
         <Header />
         <div className="page">
           {this.props.children}
