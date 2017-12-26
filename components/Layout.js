@@ -11,10 +11,6 @@ export default class Layout extends React.Component {
       active: 'home'
     };
   }
-  componentDidMount() {
-
-  }
-
   render() {
     return (
       <div>

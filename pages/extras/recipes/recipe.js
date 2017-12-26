@@ -44,7 +44,6 @@ export default class RecipePage extends React.Component {
   render() {
     const { recipe = {}, baseURL } = this.props;
     function TagsList(props) {
-      console.log(props);
       const tags = props.tags || [];
       const tagItems = tags.map(tag => (
         <Tag href={`/recipe/${tag.toLowerCase()}`}>{tag}</Tag>

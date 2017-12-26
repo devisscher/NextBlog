@@ -18,7 +18,7 @@ const {
   getRecipe
 } = require('./lib/getPosts');
 
-//const { likeTweets } = require('./lib/likeTweets');
+// const { likeTweets } = require('./lib/likeTweets');
 
 app.prepare().then(() => {
   const server = express();
@@ -75,7 +75,6 @@ app.prepare().then(() => {
     res.status(404).json({ message: 'Sorry not found' });
   });
   server.all('*', (req, res, next) => {
-    //console.log(req.hostname)
     next()
   })
   // Define other pages here

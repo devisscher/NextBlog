@@ -33,17 +33,10 @@ export default class PostPage extends React.Component {
     const git = process.env.npm_package_repository_url
     const filePath = git.replace('git+', '')
       .replace('.git', '/blob/master/posts/');
-    console.log(filePath);
-
-    https://github.com/devisscher/blog/blob/master/posts/001-welcome-to-jekyll.md
-    // console.log('referer', urlSplit);
-    // console.log('postId', postId);
     const protocol =
       req && req.headers.host.indexOf('localhost') > -1
         ? 'http'
         : req ? req.protocol : '';
-    // const urlSplit = window.location.href.split('/');
-    // const postId = urlSplit[urlSplit.length - 2];
     const baseURL = req
       ? `${protocol}://${req.headers.host}`
       : window.location.origin;
