@@ -1,8 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 import Posts from '../components/Posts';
-
 import Layout from '../components/Layout';
+
+import baseURL from '../lib/environment';
 
 export default class Index extends React.Component {
   constructor(props) {
@@ -22,7 +23,7 @@ export default class Index extends React.Component {
   render() {
     const { posts = [], baseURL } = this.props;
     return (
-      <Layout baseURL={baseURL}>
+      <Layout>
         <h2 className="page-header">Home</h2>
         <Posts posts={posts} />
       </Layout>

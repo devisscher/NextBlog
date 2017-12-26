@@ -12,10 +12,10 @@ export default class Layout extends React.Component {
       active: 'home'
     };
   }
+
   render() {
     const { baseURL } = this.props;
     return (
-
       <div>
         <Meta baseURL={baseURL} />
         <Header />

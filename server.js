@@ -81,13 +81,7 @@ app.prepare().then(() => {
   server.get('/static', (req, res) => {
     res.sendFile(path.join(__dirname + '/static/index.html'));
   });
-  server.use(express.static('node_modules/react-ga'))
-  // Every hour, like tweets
-  // cron.schedule('0 * * * *', function() {
-  //   console.log('running a task every minute');
-  //   likeTweets();
-  // });
-  // Custom Next.js URLs
+  //server.use(express.static('node_modules/react-ga'))
   Router.forEachPattern((page, pattern, defaultParams) => {
     server.get(pattern, (req, res) => {
       app.render(
@@ -98,7 +92,6 @@ app.prepare().then(() => {
       );
     });
   });
-  // everything else
   server.get('*', (req, res) => handle(req, res));
   server.listen(port);
   // console.log(process.env.npm_package_repository_url)
