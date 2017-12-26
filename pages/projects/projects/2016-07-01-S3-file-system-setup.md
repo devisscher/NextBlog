@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "S3 file system setup with Node.js SDK"
-date:   1467363600000
+date:   1467363600007
 categories: project
 duration: 3 months
 ---
