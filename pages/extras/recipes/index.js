@@ -1,26 +1,20 @@
-import React from 'react'
-import axios from 'axios'
-import Projects from '../../../components/Projects'
+import React from 'react';
+import axios from 'axios';
+import { baseURL } from '../../../lib/url';
+import Projects from '../../../components/Projects';
 
-import Layout from '../../../components/Layout'
+import Layout from '../../../components/Layout';
 
 export default class Index extends React.Component {
   constructor(props) {
-    super();
+    super(props);
   }
-  static async getInitialProps({ req }) {
-    const protocol =
-      req && req.headers.host.indexOf('localhost') > -1
-        ? 'http'
-        : req ? req.protocol : '';
-    const baseURL = req
-      ? `${protocol}://${req.headers.host}`
-      : window.location.origin;
+  static async getInitialProps() {
     const { data: recipes } = await axios.get(`${baseURL}/api/recipes`);
-    return { recipes, baseURL };
+    return { recipes };
   }
   render() {
-    const { recipes = [], baseURL } = this.props;
+    const { recipes = [] } = this.props;
     return (
       <Layout>
         <h2>Recipes</h2>

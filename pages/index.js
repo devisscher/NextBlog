@@ -3,26 +3,23 @@ import axios from 'axios';
 import Posts from '../components/Posts';
 import Layout from '../components/Layout';
 
+import { getBaseUrl } from '../lib/url';
+
 export default class Index extends React.Component {
-  constructor(props) {
-    super();
-  }
   static async getInitialProps({ req }) {
-    const protocol =
-      req && req.headers.host.indexOf('localhost') > -1
-        ? 'http'
-        : req ? req.protocol : '';
-    const baseURL = req
-      ? `${protocol}://${req.headers.host}`
-      : window.location.origin;
-    const { data: posts } = await axios.get(`${baseURL}/api/posts`);
-    return { posts, baseURL };
+    const { data: posts } = await axios.get('http://localhost:3000/api/posts');
+    return { posts };
+  }
+  constructor(props) {
+    super(props);
   }
   render() {
-    const { posts = [], baseURL } = this.props;
+    const { posts = [] } = this.props;
+    console.log('the props are: ', this.props);
     return (
       <Layout>
         <h2 className="page-header">Home</h2>
+        <h2>{this.props.site}</h2>
         <Posts posts={posts} />
       </Layout>
     );

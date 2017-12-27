@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Link from 'next/link';
 
 import glamorous from 'glamorous';
@@ -11,8 +11,8 @@ const Navigation = glamorous.nav({
   width: '100vw',
   '& .links': {
     maxWidth: '800px',
-    margin: '0 auto'
-  }
+    margin: '0 auto',
+  },
 });
 
 const Anchor = glamorous.a({
@@ -21,17 +21,17 @@ const Anchor = glamorous.a({
   color: 'white',
   lineHeight: '50px',
   ':hover': {
-    color: '#e1bee7'
+    color: '#e1bee7',
   },
   '.active': {
-    borderBottom: '2px solid white'
-  }
+    borderBottom: '2px solid white',
+  },
 });
 
 const Heading = glamorous.h1({
   fontSize: '2.4em',
   marginTop: 10,
-  color: 'red'
+  color: 'red',
 });
 
 const links = [
@@ -43,45 +43,44 @@ const links = [
       {
         name: 'Home',
         url: '/',
-        slug: 'home'
+        slug: 'home',
       },
       {
         name: 'Projects',
         url: '/projects',
-        slug: 'projects'
+        slug: 'projects',
       },
       {
         name: 'Tags',
         url: '/tags',
-        slug: 'tags'
-      }
-    ]
+        slug: 'tags',
+      },
+    ],
   },
   { name: 'About', url: '/about', slug: 'about' },
   {
     name: 'Extras',
     url: '/extras',
-    slug: 'extras'
-  }
+    slug: 'extras',
+  },
 ];
 
 export default class Header extends React.Component {
   constructor(props) {
     super();
     this.state = {
-      active: 'home'
+      active: 'home',
     };
   }
 
   componentDidMount() {
-    let activeClass = location.pathname.split('/')[1];
+    const activeClass = location.pathname.split('/')[1];
     activeClass
       ? this.setState({ active: activeClass })
       : this.setState({ active: 'home' });
-    console.log('the class:', activeClass);
   }
   render() {
-    let activeClass = this.state.active;
+    const activeClass = this.state.active;
     function LinkList(props) {
       const links = props.links;
       const listItems = links.map(link => (
@@ -91,7 +90,7 @@ export default class Header extends React.Component {
               className="dropdown"
               style={{
                 cursor: 'pointer',
-                color: 'white'
+                color: 'white',
               }}
             >
               <Link href="">
@@ -113,7 +112,7 @@ export default class Header extends React.Component {
               </div>
             </span>
           ) : (
-              <Link href={link.url}>
+            <Link href={link.url}>
                 <Anchor className={activeClass === link.slug ? 'active' : ''}>
                   {link.name}
                 </Anchor>

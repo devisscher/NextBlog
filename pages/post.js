@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { baseURL } from '../lib/url';
 import Posts from '../components/Posts';
 import format from 'date-fns/format';
 import glamorous from 'glamorous';
@@ -18,8 +19,8 @@ const Tag = glamorous.a({
   background: '#606c76',
   ':hover': {
     color: 'white',
-    background: '#9b4dca'
-  }
+    background: '#9b4dca',
+  },
 });
 
 export default class PostPage extends React.Component {
@@ -27,27 +28,14 @@ export default class PostPage extends React.Component {
     super();
   }
   static async getInitialProps({ req }) {
-    //const { query, params } = query;
-    //return params.id;
-    console.log('>> params are: ', req.params, req.query, '\naaa\n');
-    const git = process.env.npm_package_repository_url
+    const git = process.env.npm_package_repository_url;
     const filePath = git.replace('git+', '')
       .replace('.git', '/blob/master/posts/');
-    const protocol =
-      req && req.headers.host.indexOf('localhost') > -1
-        ? 'http'
-        : req ? req.protocol : '';
-    const baseURL = req
-      ? `${protocol}://${req.headers.host}`
-      : window.location.origin;
-    const { data: post } = await axios.get(
-      `${baseURL}/api/posts/${req.params.number}`
-    );
-
-    return { post, baseURL, filePath };
+    const { data: post } = await axios.get(`${baseURL}/api/posts/${req.params.number}`);
+    return { post, filePath };
   }
   render() {
-    const { post = {}, baseURL, filePath } = this.props;
+    const { post = {}, filePath } = this.props;
     function TagsList(props) {
       console.log(props);
       const tags = props.tags || [];

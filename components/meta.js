@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
 import stylesheet from '../styles/style.scss';
+import { baseURL } from '../lib/url';
 import slug from 'speakingurl';
 import ReactGA from 'react-ga';
 import axios from 'axios';
@@ -10,23 +11,20 @@ export default class Meta extends React.Component {
     super(props);
     this.state = {
       pathName: '',
-      search: ''
-    }
+      search: '',
+    };
   }
   componentDidMount() {
-    // get window information
-    this.setState({ pathName: window.location.pathname })
-    this.setState({ search: window.location.search })
+    this.setState({ pathName: window.location.pathname });
+    this.setState({ search: window.location.search });
   }
   render() {
-    const { baseURL } = this.props;
     return (
       <div>
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta charSet="utf-8" />
-          <title>tdevisscher.com</title>
-          <meta property="og:title" content={`Thomas Devisscher`} />
+          <meta property="og:title" content="Thomas Devisscher" />
           <meta
             property="og:description"
             content="Thomas Devisscher lives and works in Ottawa, Canada building JavaScript and Python things. You should follow him."
@@ -34,11 +32,11 @@ export default class Meta extends React.Component {
           <meta property="og:url" content={baseURL} />
           <meta
             property="og:image"
-            content={`https://s3.amazonaws.com/tdevisscher-images/collaborative-projects/td.png`}
+            content="https://s3.amazonaws.com/tdevisscher-images/collaborative-projects/td.png"
           />
           <link
             rel="shortcut icon"
-            href={`https://s3.amazonaws.com/tdevisscher-images/collaborative-projects/td.png`}
+            href="https://s3.amazonaws.com/tdevisscher-images/collaborative-projects/td.png"
           />
           <title>Thomas Devisscher</title>
           <style
@@ -50,6 +48,6 @@ export default class Meta extends React.Component {
           </script>
 
         </Head>
-      </div>)
+      </div>);
   }
 }

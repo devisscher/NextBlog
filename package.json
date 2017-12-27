@@ -52,6 +52,11 @@
     "react-dom": "^16.0.0",
     "react-ga": "^2.3.5",
     "react-markdown": "^2.5.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-promise-middleware": "^5.0.0",
+    "redux-thunk": "^2.2.0",
     "sass-loader": "^6.0.6",
     "speakingurl": "^14.0.1"
   },

@@ -1,10 +1,10 @@
 const express = require('express');
-const next = require('next');
+const Next = require('next');
 const Router = require('./routes').Router;
-const path = require('path');
+
 const dev = process.env.NODE_ENV !== 'production';
 const port = parseInt(process.env.PORT, 10) || 3000;
-const app = next({ dev });
+const app = Next({ dev });
 const handle = app.getRequestHandler();
 const {
   getPosts,
@@ -14,7 +14,7 @@ const {
   getProjects,
   getProject,
   getRecipes,
-  getRecipe
+  getRecipe,
 } = require('./lib/getPosts');
 
 app.prepare().then(() => {
@@ -72,11 +72,7 @@ app.prepare().then(() => {
     res.status(404).json({ message: 'Sorry not found' });
   });
   server.all('*', (req, res, next) => {
-    next()
-  })
-  // Define other pages here
-  server.get('/static', (req, res) => {
-    res.sendFile(path.join(__dirname + '/static/index.html'));
+    next();
   });
 
   Router.forEachPattern((page, pattern, defaultParams) => {
@@ -85,12 +81,10 @@ app.prepare().then(() => {
         req,
         res,
         `/${page}`,
-        Object.assign({}, defaultParams, req.query, req.params)
+        Object.assign({}, defaultParams, req.query, req.params),
       );
     });
   });
   server.get('*', (req, res) => handle(req, res));
   server.listen(port);
-  // console.log(process.env.npm_package_repository_url)
-
 });

@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { baseURL } from '../../lib/url';
 import Projects from '../../components/Projects';
 import format from 'date-fns/format';
 import glamorous from 'glamorous';
@@ -18,8 +19,8 @@ const Tag = glamorous.a({
   background: '#606c76',
   ':hover': {
     color: 'white',
-    background: '#9b4dca'
-  }
+    background: '#9b4dca',
+  },
 });
 
 export default class ProjectPage extends React.Component {
@@ -27,28 +28,12 @@ export default class ProjectPage extends React.Component {
     super();
   }
   static async getInitialProps({ req }) {
-    //const { query, params } = query;
-    //return params.id;
-    console.log('>> params are: ', req.params, req.query, '\naaa\n');
-    // console.log('referer', urlSplit);
-    // console.log('projectId', projectId);
-    const protocol =
-      req && req.headers.host.indexOf('localhost') > -1
-        ? 'http'
-        : req ? req.protocol : '';
-    // const urlSplit = window.location.href.split('/');
-    // const projectId = urlSplit[urlSplit.length - 2];
-    const baseURL = req
-      ? `${protocol}://${req.headers.host}`
-      : window.location.origin;
-    const { data: project } = await axios.get(
-      `${baseURL}/api/project/${req.params.project}`
-    );
+    const { data: project } = await axios.get(`${baseURL}/api/project/${req.params.project}`);
 
-    return { project, baseURL };
+    return { project };
   }
   render() {
-    const { project = {}, baseURL } = this.props;
+    const { project = {} } = this.props;
     function TagsList(props) {
       console.log(props);
       const tags = props.tags || [];

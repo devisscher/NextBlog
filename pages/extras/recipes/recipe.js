@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { baseURL } from '../../../lib/url';
 import Projects from '../../../components/Projects';
 import format from 'date-fns/format';
 import glamorous from 'glamorous';
@@ -27,19 +28,11 @@ export default class RecipePage extends React.Component {
     super();
   }
   static async getInitialProps({ req }) {
-    const protocol =
-      req && req.headers.host.indexOf('localhost') > -1
-        ? 'http'
-        : req ? req.protocol : '';
-    const baseURL = req
-      ? `${protocol}://${req.headers.host}`
-      : window.location.origin;
     const { data: recipe } = await axios.get(`${baseURL}/api/recipe/${req.params.recipe}`);
-
-    return { recipe, baseURL };
+    return { recipe };
   }
   render() {
-    const { recipe = {}, baseURL } = this.props;
+    const { recipe = {} } = this.props;
     function TagsList(props) {
       const tags = props.tags || [];
       const tagItems = tags.map(tag => (
