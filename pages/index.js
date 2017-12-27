@@ -3,8 +3,6 @@ import axios from 'axios';
 import Posts from '../components/Posts';
 import Layout from '../components/Layout';
 
-import baseURL from '../lib/environment';
-
 export default class Index extends React.Component {
   constructor(props) {
     super();

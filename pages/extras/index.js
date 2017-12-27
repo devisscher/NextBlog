@@ -9,7 +9,6 @@ export default class Extras extends React.Component {
       information: {}
     };
   }
-  componentDidMount() { }
   render() {
     return (
       <Layout>

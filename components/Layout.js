@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Header from './Header';
 import Meta from '../components/meta';
 import Footer from '../components/Footer';
@@ -9,7 +9,7 @@ export default class Layout extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: 'home'
+      active: 'home',
     };
   }
 
@@ -21,13 +21,17 @@ export default class Layout extends React.Component {
         <Header />
         <div className="page">
           {this.props.children}
-          <AdSense.Google client='ca-pub-8615534749322314'
-            style={{ display: 'block', width: '100%', height: '200px', backgroundColor: 'white' }}
-            slot=''
-            format='' />
+          <AdSense.Google
+            client="ca-pub-8615534749322314"
+            style={{
+              display: 'block', width: '100%', height: '200px', backgroundColor: 'white',
+            }}
+            slot=""
+            format=""
+          />
         </div>
         <Footer />
       </div>
-    )
+    );
   }
 }

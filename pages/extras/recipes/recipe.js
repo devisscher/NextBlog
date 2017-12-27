@@ -5,7 +5,6 @@ import format from 'date-fns/format';
 import glamorous from 'glamorous';
 import Link from 'next/link';
 import Layout from '../../../components/Layout';
-import { Url } from '../../../lib/url';
 
 const Tag = glamorous.a({
   display: 'inline-block',
@@ -19,8 +18,8 @@ const Tag = glamorous.a({
   background: '#606c76',
   ':hover': {
     color: 'white',
-    background: '#9b4dca'
-  }
+    background: '#9b4dca',
+  },
 });
 
 export default class RecipePage extends React.Component {
@@ -35,9 +34,7 @@ export default class RecipePage extends React.Component {
     const baseURL = req
       ? `${protocol}://${req.headers.host}`
       : window.location.origin;
-    const { data: recipe } = await axios.get(
-      `${baseURL}/api/recipe/${req.params.recipe}`
-    );
+    const { data: recipe } = await axios.get(`${baseURL}/api/recipe/${req.params.recipe}`);
 
     return { recipe, baseURL };
   }
@@ -53,7 +50,6 @@ export default class RecipePage extends React.Component {
     return (
       <Layout>
         <h1>{recipe.title}</h1>
-        <Url />
         <small style={{ paddingTop: 0 }}>
           {format(parseFloat(recipe.date), 'MMM Do, YYYY')}
         </small>

@@ -2,7 +2,6 @@ const express = require('express');
 const next = require('next');
 const Router = require('./routes').Router;
 const path = require('path');
-const cron = require('node-cron');
 const dev = process.env.NODE_ENV !== 'production';
 const port = parseInt(process.env.PORT, 10) || 3000;
 const app = next({ dev });
@@ -17,8 +16,6 @@ const {
   getRecipes,
   getRecipe
 } = require('./lib/getPosts');
-
-// const { likeTweets } = require('./lib/likeTweets');
 
 app.prepare().then(() => {
   const server = express();
@@ -81,7 +78,7 @@ app.prepare().then(() => {
   server.get('/static', (req, res) => {
     res.sendFile(path.join(__dirname + '/static/index.html'));
   });
-  //server.use(express.static('node_modules/react-ga'))
+
   Router.forEachPattern((page, pattern, defaultParams) => {
     server.get(pattern, (req, res) => {
       app.render(
