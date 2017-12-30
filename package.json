@@ -12,11 +12,13 @@
     "alias": "tdevisscher.com",
     "env": {
       "NODE_ENV": "production",
-      "TWITTER_KEY": "@twitter_key"
+      "TWITTER_KEY": "@twitter_key",
+      "BASE_URL": "https://tdevisscher.com"
     }
   },
   "scripts": {
     "test": "jest",
+    "dev": "BASE_URL=http://localhost:3000 node server.js",
     "start": "node server.js",
     "build": "next build",
     "deploy": "now --token $NOW_TOKEN --npm",

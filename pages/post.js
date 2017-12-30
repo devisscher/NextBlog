@@ -24,9 +24,6 @@ const Tag = glamorous.a({
 });
 
 export default class PostPage extends React.Component {
-  constructor(props) {
-    super();
-  }
   static async getInitialProps({ req }) {
     const git = process.env.npm_package_repository_url;
     const filePath = git.replace('git+', '')
