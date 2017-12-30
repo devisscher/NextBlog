@@ -3,20 +3,28 @@ import axios from 'axios';
 import Posts from '../components/Posts';
 import Layout from '../components/Layout';
 
-const BASE_URL = process !== 'undefined' ? process.env.BASE_URL : null;
-
 export default class Index extends React.Component {
-  static async getInitialProps() {
-    const { data: posts } = await axios.get(`${BASE_URL}/api/posts`);
-    return { posts, BASE_URL };
+  constructor(props) {
+    super(props);
+    this.state = {
+      posts: [],
+    };
+  }
+  componentDidMount() {
+    this.getPosts();
+  }
+  getPosts() {
+    axios.get('/api/posts').then((response) => {
+      this.setState({ posts: response.data });
+    }).catch((err) => {
+      this.setState({ posts: [{ title: `No posts found. ${err}` }] });
+    });
   }
   render() {
-    const { posts = [] } = this.props;
     return (
       <Layout>
         <h2 className="page-header">Home</h2>
-        <h2>{this.props.BASE_URL}</h2>
-        <Posts posts={posts} />
+        <Posts posts={this.state.posts} />
       </Layout>
     );
   }

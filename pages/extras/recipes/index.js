@@ -5,20 +5,27 @@ import Projects from '../../../components/Projects';
 
 import Layout from '../../../components/Layout';
 
-const BASE_URL = process !== 'undefined' ? process.env.BASE_URL : null;
-
 export default class Index extends React.Component {
-  static async getInitialProps() {
-    const { data: recipes } = await axios.get(`${BASE_URL}/api/recipes`);
-    return { recipes };
+  constructor(props) {
+    super(props);
+    this.state = {
+      recipes: [],
+    };
+  }
+  componentDidMount() {
+    this.getRecipes();
+  }
+  getRecipes() {
+    axios.get('/api/recipes').then((response) => {
+      this.setState({ recipes: response.data });
+    });
   }
   render() {
-    const { recipes = [] } = this.props;
     return (
       <Layout>
         <h2>Recipes</h2>
         <p>A non exhaustive list of recipes I enjoy making.</p>
-        <Projects projects={recipes} type="recipes" />
+        <Projects projects={this.state.recipes} type="recipes" />
       </Layout>
     );
   }
