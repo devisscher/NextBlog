@@ -67,12 +67,11 @@ const links = [
 
 export default class Header extends React.Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
       active: 'home',
     };
   }
-
   componentDidMount() {
     const activeClass = location.pathname.split('/')[1];
     activeClass

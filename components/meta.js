@@ -1,10 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
 import stylesheet from '../styles/style.scss';
-import { baseURL } from '../lib/url';
 import slug from 'speakingurl';
 import ReactGA from 'react-ga';
 import axios from 'axios';
+
+const BASE_URL = process !== 'undefined' ? process.env.BASE_URL : null;
 
 export default class Meta extends React.Component {
   constructor(props) {
@@ -29,7 +30,7 @@ export default class Meta extends React.Component {
             property="og:description"
             content="Thomas Devisscher lives and works in Ottawa, Canada building JavaScript and Python things. You should follow him."
           />
-          <meta property="og:url" content={baseURL} />
+          <meta property="og:url" content={BASE_URL} />
           <meta
             property="og:image"
             content="https://s3.amazonaws.com/tdevisscher-images/collaborative-projects/td.png"
@@ -46,7 +47,6 @@ export default class Meta extends React.Component {
             {ReactGA.initialize('UA-110816894-1', { debug: true })}
             {ReactGA.pageview(this.state.pathName, this.state.search)}
           </script>
-
         </Head>
       </div>);
   }

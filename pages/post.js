@@ -1,11 +1,12 @@
 import React from 'react';
 import axios from 'axios';
-import { baseURL } from '../lib/url';
 import Posts from '../components/Posts';
 import format from 'date-fns/format';
 import glamorous from 'glamorous';
 
 import Layout from '../components/Layout';
+
+const BASE_URL = process !== 'undefined' ? process.env.BASE_URL : null;
 
 const Tag = glamorous.a({
   display: 'inline-block',
@@ -28,13 +29,12 @@ export default class PostPage extends React.Component {
     const git = process.env.npm_package_repository_url;
     const filePath = git.replace('git+', '')
       .replace('.git', '/blob/master/posts/');
-    const { data: post } = await axios.get(`${baseURL}/api/posts/${req.params.number}`);
+    const { data: post } = await axios.get(`${BASE_URL}/api/posts/${req.params.number}`);
     return { post, filePath };
   }
   render() {
     const { post = {}, filePath } = this.props;
     function TagsList(props) {
-      console.log(props);
       const tags = props.tags || [];
       const tagItems = tags.map((tag, index) => (
         <Tag href={`/tags/${tag.toLowerCase()}`} key={index}>{tag}</Tag>

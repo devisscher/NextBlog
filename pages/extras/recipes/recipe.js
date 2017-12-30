@@ -1,11 +1,12 @@
 import React from 'react';
 import axios from 'axios';
-import { baseURL } from '../../../lib/url';
 import Projects from '../../../components/Projects';
 import format from 'date-fns/format';
 import glamorous from 'glamorous';
 import Link from 'next/link';
 import Layout from '../../../components/Layout';
+
+const BASE_URL = process !== 'undefined' ? process.env.BASE_URL : null;
 
 const Tag = glamorous.a({
   display: 'inline-block',
@@ -24,11 +25,8 @@ const Tag = glamorous.a({
 });
 
 export default class RecipePage extends React.Component {
-  constructor(props) {
-    super();
-  }
   static async getInitialProps({ req }) {
-    const { data: recipe } = await axios.get(`${baseURL}/api/recipe/${req.params.recipe}`);
+    const { data: recipe } = await axios.get(`${BASE_URL}/api/recipe/${req.params.recipe}`);
     return { recipe };
   }
   render() {

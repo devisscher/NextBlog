@@ -1,16 +1,15 @@
 import React from 'react';
 import axios from 'axios';
-import { baseURL } from '../../lib/url';
+
 import Projects from '../../components/Projects';
 
 import Layout from '../../components/Layout';
-// Test
+
+const BASE_URL = process !== 'undefined' ? process.env.BASE_URL : null;
+
 export default class Index extends React.Component {
-  constructor(props) {
-    super();
-  }
   static async getInitialProps() {
-    const { data: projects } = await axios.get(`${baseURL}/api/projects`);
+    const { data: projects } = await axios.get(`${BASE_URL}/api/projects`);
     return { projects };
   }
   render() {

@@ -1,11 +1,12 @@
 import React from 'react';
 import axios from 'axios';
-import { baseURL } from '../../lib/url';
 import Projects from '../../components/Projects';
 import format from 'date-fns/format';
 import glamorous from 'glamorous';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
+
+const BASE_URL = process !== 'undefined' ? process.env.BASE_URL : null;
 
 const Tag = glamorous.a({
   display: 'inline-block',
@@ -24,18 +25,14 @@ const Tag = glamorous.a({
 });
 
 export default class ProjectPage extends React.Component {
-  constructor(props) {
-    super();
-  }
   static async getInitialProps({ req }) {
-    const { data: project } = await axios.get(`${baseURL}/api/project/${req.params.project}`);
+    const { data: project } = await axios.get(`${BASE_URL}/api/project/${req.params.project}`);
 
     return { project };
   }
   render() {
     const { project = {} } = this.props;
     function TagsList(props) {
-      console.log(props);
       const tags = props.tags || [];
       const tagItems = tags.map(tag => (
         <Tag href={`/projects/${tag.toLowerCase()}`}>{tag}</Tag>
