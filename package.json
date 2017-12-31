@@ -19,7 +19,7 @@
   "scripts": {
     "test": "jest",
     "dev": "BASE_URL=http://localhost:3000 node server.js",
-    "start": "node server.js",
+    "start": "BASE_URL=http://localhost:3000 node server.js",
     "build": "next build",
     "deploy": "now --token $NOW_TOKEN --npm",
     "alias": "now alias --token=$NOW_TOKEN"
