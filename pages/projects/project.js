@@ -41,7 +41,7 @@ export default class ProjectPage extends React.Component {
     }
     return (
       <Layout>
-        <h1>{project.title}</h1>
+        <h2>{project.title}</h2>
         <TagsList tags={project.tags} />
         <small style={{ paddingTop: 0 }}>
           {format(parseFloat(project.date), 'MMM Do, YYYY')}
