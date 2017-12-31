@@ -74,7 +74,6 @@ app.prepare().then(() => {
   server.all('*', (req, res, next) => {
     next();
   });
-
   Router.forEachPattern((page, pattern, defaultParams) => {
     server.get(pattern, (req, res) => {
       app.render(

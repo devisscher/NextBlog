@@ -1,6 +1,9 @@
 FROM node:8
-# Create app directory
 
+# Environment variables
+ENV NODE_ENV=production PORT=3000
+
+# Create app directory
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
@@ -10,6 +13,9 @@ RUN npm install
 
 # Bundle app source
 COPY . /usr/src/app
+
+# Run build
+RUN npm run build
 
 EXPOSE 3000
 CMD ["npm", "start"]

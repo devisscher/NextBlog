@@ -29,9 +29,10 @@ export default class PostPage extends React.Component {
     const git = process.env.npm_package_repository_url;
     const filePath = git.replace('git+', '')
       .replace('.git', '/blob/master/posts/');
-    const { data: post } = await axios.get(`${BASE_URL}/api/posts/${req.params.number}`);
+    const { data: post } = await axios.get(`http://localhost:3000/api/posts/${req.params.number}`);
     return { post, filePath };
   }
+
   render() {
     const { post = {}, filePath } = this.props;
     function TagsList(props) {
