@@ -11,14 +11,14 @@ export default class BooketList extends React.Component {
   getList = () => {
     axios
       .get(
-        'https://raw.githubusercontent.com/devisscher/Booket-List/master/data/booket_list' +
-          '.json'
+      'https://raw.githubusercontent.com/devisscher/Booket-List/master/data/booket_list' +
+      '.json'
       )
       .then(response => {
         console.log(response.data);
         this.setState({ results: response.data });
       })
-      .catch(function(error) {
+      .catch(function (error) {
         console.log(error);
       });
   };

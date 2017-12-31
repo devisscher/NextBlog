@@ -6,16 +6,16 @@ export default class Quotes extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      results: []
+      results: [],
     };
   }
   componentDidMount() {
     axios
-      .get('https://api.tdevisscher.ca/quotes')
-      .then(response => {
-        this.setState({ results: response.data.quotes });
+      .get('https://raw.githubusercontent.com/devisscher/Quotes/master/quotes.json')
+      .then((response) => {
+        this.setState({ results: response.data });
       })
-      .catch(function (error) {
+      .catch((error) => {
         console.log(error);
       });
   }
@@ -24,19 +24,17 @@ export default class Quotes extends React.Component {
     return (
       <Layout>
         <div>
-          {this.state.results.map(result => {
-            return (
-              <blockquote key={result._id}>
-                <p>
-                  {result.quote}
-                  <br />
-                  <a href="#">
-                    <em>{result.author}</em>
-                  </a>
-                </p>
-              </blockquote>
-            );
-          })}
+          {this.state.results.map(result => (
+            <blockquote key={result.id}>
+              <p>
+                {result.quote}
+                <br />
+                <a href="#">
+                  <em>{result.author}</em>
+                </a>
+              </p>
+            </blockquote>
+          ))}
         </div>
       </Layout>
     );
