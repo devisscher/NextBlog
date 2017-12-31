@@ -1,4 +1,7 @@
 @import 'milligram/dist/milligram';
+@import url('fonts/RobotoSlab-Regular.ttf');
+
+$roboto-slab: 'Roboto Slab', serif;  
 // Colours
 $primary-color-dark: #9b4dca;
 $primary-color: #9c27b0;
@@ -15,6 +18,7 @@ $break-large: 1200px;
 // Global
 
 h1, h2 {
+  font-family: $roboto-slab;
   text-transform: uppercase;
 }
 
