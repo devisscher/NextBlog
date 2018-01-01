@@ -13,7 +13,7 @@ Delicious home made creamy mac and cheese.
 - 2 cups of cheese
 - 1/4 cup of butter
 - 1/4 cup of flour
-- 455 grams of pasta cooked
+- 455 grams of pasta
 
 ## Roux 
 

@@ -18,4 +18,6 @@ This is a great recipe for asian style chicken.
 
 In a ziploc bag, mix the ingredients and the chicken and marinate up to 4 hours. 
 
-Cook in a non stick pan, until the sauce has thickened and the chicken is ready.
+Cook in a non stick pan on medium heat, until the sauce has thickened and the chicken is ready.
+
+Serve with vermicelli or buckwheat noodles and a green vegetable such as brocoli or bok choy.
