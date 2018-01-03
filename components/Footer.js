@@ -9,14 +9,14 @@ const List = glamorous.ul({
   fontSize: '1rem',
   textAlign: 'center',
   listStyleType: 'none',
-  float: 'left'
+  float: 'left',
 });
 const Li = glamorous.li({
   float: 'left',
   '& a': {
     paddingRight: '3px',
-    paddingLeft: '3px'
-  }
+    paddingLeft: '3px',
+  },
 });
 const Butt = glamorous.div({
   display: 'inline-block',
@@ -26,31 +26,36 @@ const Butt = glamorous.div({
   '& .github': {
     color: '#fff',
     textDecoration: 'none',
-    background: '#28a745'
+    background: '#28a745',
   },
   '& .twitter': {
     color: '#fff',
     textDecoration: 'none',
-    background: '#1da1f2'
+    background: '#1da1f2',
   },
   '& .linkedin': {
     color: '#fff',
     textDecoration: 'none',
-    background: '#0073b1'
+    background: '#0073b1',
   },
   '& .instagram': {
     color: '#fff',
     textDecoration: 'none',
-    background: '#bc2a8d'
+    background: '#bc2a8d',
+  },
+  '& .strava': {
+    color: '#fff',
+    textDecoration: 'none',
+    background: '#fc4c02',
   },
   '& .email': {
     color: '#fff',
     textDecoration: 'none',
-    background: '#dd5347'
+    background: '#dd5347',
   },
   ':hover': {
-    transform: 'scale(1,1.2)'
-  }
+    transform: 'scale(1,1.2)',
+  },
 });
 const Footer = () => (
   <footer
@@ -58,7 +63,7 @@ const Footer = () => (
       textAlign: 'center',
       left: 0,
       bottom: 0,
-      width: '100vw'
+      width: '100vw',
     }}
   >
 
@@ -76,7 +81,7 @@ const Footer = () => (
         float: 'right',
         position: 'relative',
         left: '-50%',
-        textAlign: 'left'
+        textAlign: 'left',
       }}
     >
       <List>
@@ -87,6 +92,7 @@ const Footer = () => (
             </a>
           </Butt>
         </Li>
+
         <Li>
           <Butt>
             <a className="twitter" href="https://twitter.com/devisscher">
@@ -101,6 +107,16 @@ const Footer = () => (
               href="https://www.instagram.com/tdevisscher/"
             >
               Instagram
+            </a>
+          </Butt>
+        </Li>
+        <Li>
+          <Butt>
+            <a
+              className="strava"
+              href="https://www.strava.com/athletes/1931557"
+            >
+              Strava
             </a>
           </Butt>
         </Li>

@@ -10,19 +10,26 @@ export default class TagsPage extends React.Component {
     const { data: tags } = await axios.get(`${BASE_URL}/api/tags`);
     return { tags };
   }
-  // componentDidMount() {
-  //   this.getTags();
-  // }
-  // getTags() {
-  //   axios.get('/api/tags').then((response) => {
-  //     this.setState({ tags: response.data });
-  //   }).catch((err) => {
-  //     this.setState({ tags: [{ tag: err }] });
-  //   });
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      tags: [],
+    };
+  }
+  componentDidMount() {
+    this.getTags();
+  }
+
+  getTags() {
+    axios.get('/api/tags').then((response) => {
+      this.setState({ tags: response.data });
+    }).catch((err) => {
+      this.setState({ tags: [{ tag: err }] });
+    });
+  }
 
   render() {
-    const { tags } = this.props;
+    const { tags } = this.props || this.state;
     return (
       <Layout>
         <h2>All tags</h2>

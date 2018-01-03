@@ -50,11 +50,11 @@ const links = [
         url: '/projects',
         slug: 'projects',
       },
-      {
-        name: 'Tags',
-        url: '/tags',
-        slug: 'tags',
-      },
+      // {
+      //   name: 'Tags',
+      //   url: '/tags',
+      //   slug: 'tags',
+      // },
     ],
   },
   { name: 'About', url: '/about', slug: 'about' },
@@ -112,10 +112,10 @@ export default class Header extends React.Component {
             </span>
           ) : (
             <Link href={link.url}>
-                <Anchor className={activeClass === link.slug ? 'active' : ''}>
-                  {link.name}
-                </Anchor>
-              </Link>
+              <Anchor className={activeClass === link.slug ? 'active' : ''}>
+                {link.name}
+              </Anchor>
+            </Link>
             )}
         </span>
       ));
