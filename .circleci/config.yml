@@ -50,6 +50,9 @@ jobs:
       - run:
           name: Alias 
           command: npm run alias
+      environment:
+          - NOW_TOKEN: NOW_TOKEN
+       BASH_ENV: ~/.bashrc
 workflows:
   version: 2
   build-deploy:
