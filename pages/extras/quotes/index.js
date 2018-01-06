@@ -23,7 +23,6 @@ export default class Quotes extends React.Component {
       search: '',
     };
     this.handleFilter = this.handleFilter.bind(this);
-    this.clearFilter = this.clearFilter.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
   }
 
@@ -44,17 +43,12 @@ export default class Quotes extends React.Component {
   handleSearch(event) {
     this.setState({ search: event.target.value });
   }
-  clearFilter() {
-    this.setState({ authorFilter: 'all' });
-  }
-
   render() {
     return (
       <Layout>
         <div>
           <fieldset>
             <input type="text" placeholder="search" onChange={this.handleSearch} />
-            <button onClick={this.clearFilter}>Clear</button>
           </fieldset>
         </div>
         <div>
