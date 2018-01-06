@@ -1,6 +1,7 @@
 const express = require('express');
 const Next = require('next');
 const Router = require('./routes').Router;
+const compression = require('compression');
 
 const dev = process.env.NODE_ENV !== 'production';
 const port = parseInt(process.env.PORT, 10) || 3000;
@@ -17,9 +18,10 @@ const {
   getRecipe,
 } = require('./lib/getPosts');
 
+
 app.prepare().then(() => {
   const server = express();
-
+  server.use(compression());
   // API endpoints
   // Get Posts
   server.get('/api/posts', (req, res) => {
