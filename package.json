@@ -22,7 +22,8 @@
     "start": "BASE_URL=http://localhost:3000 node server.js",
     "build": "next build",
     "deploy": "now --token $NOW_TOKEN --npm",
-    "alias": "now alias --token=$NOW_TOKEN"
+    "alias": "now alias --token=$NOW_TOKEN",
+    "scale": "now scale --token=$NOW_TOKEN 1"
   },
   "keywords": [],
   "author": "",

@@ -69,6 +69,18 @@ body {
   padding: 0 2rem;
 }
 
+.quote-button-link {
+  background:none!important;
+  border:none; 
+  padding:0!important;
+
+  /*optional*/
+  font-family:arial,sans-serif; /*input has OS specific font-family*/
+  color:#069;
+  text-decoration:underline;
+  cursor:pointer;
+}
+
 // Bar chart
 @for $i from 1 through 100 {
   .percentage-#{$i} {
