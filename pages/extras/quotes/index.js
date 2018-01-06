@@ -46,6 +46,7 @@ export default class Quotes extends React.Component {
   render() {
     return (
       <Layout>
+        <p>Quotation: A group of words taken from a text or speech and repeated by someone other than the original author or speaker.</p>
         <div>
           <fieldset>
             <input type="text" placeholder="search" onChange={this.handleSearch} />
