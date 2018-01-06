@@ -1,8 +1,6 @@
 language: node_js
 node_js: node
 cache: npm
-before_install:
-- npm install -g npm@latest
 pre_script: npm test
 script: npm run deploy
 after_script: npm run alias
