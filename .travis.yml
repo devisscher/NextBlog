@@ -2,14 +2,12 @@ language: node_js
 node_js: 
   - "8"
 cache:
-  yarn: true
+  npm: true
   directories:
     - node_modules
-install:
-  - yarn
-pre_script: yarn test
-script: yarn run deploy
-after_script: yarn run alias
+pre_script: npm test
+script: npm run deploy
+after_script: npm run alias
 env:
   global:
     secure: JQVwpLtRn7jhab69Zjd+bMjsMHFu36llfkaxWca/6NExf6WJ82BPaG3knQSSASx/cv2gZu49MzcykEpkziQDDNx3ClUCT5t7PoimJ2y1+SntZon4bgyi2xBKvyyBVWzii9LCOw3WNRcKOTty4U805qhtMNQvPL1sDgqDB7ahDIwLyyDB3oQM7bGFUKjMVkXk2yyQLMci9h5twvM65Ap6M93eEIg1PZUyzHIeB00GPCYYHi4Uc6XrVwvhklZ0Sl/cGyml1A7Icu0ML0apEK2lLQEE3A5KjSfCIKvD6PasONQicZ5q8h3ENtHwWfjiyFkIrMpgQQlWLntmbRCYW3z3TNXdKrsu7nCzEKhmMayAuf5XQVkF9lKic1aMppabPMqZcl1uBWq8XwYyNdEa0Vy52DFery+o905boUX1adFO2d26OX49c9vPuEfD9BxV+gFDex1W9ZTRW/9tTJ5AM1QLf4y44+IrhjuMvT5GjXlNMKwyGNd+sIUTg8osmvd6MCMGlMDC4Y5vCa3ULKb4Wz+MPYH8xHSswxuZbUvR1ZIC2fqnr0yAMqyAZ8fSGpNL2wfEM9z855coTA0hWNlEgZklyqMruzn0/JntSDI72YnqX4VM9cJfvWal+ohlr0QRyLwd8lu+01QmbsFVhs4HjjmsywJa81krBRK6qgbYrInAbl4=

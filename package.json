@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/devisscher/blog.git"
   },
-  "main": "index.js",
+  "main": "server.js",
   "now": {
     "name": "tdevisscher",
     "alias": "tdevisscher.com",
