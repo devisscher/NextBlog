@@ -21,8 +21,8 @@
     "dev": "BASE_URL=http://localhost:3000 node server.js",
     "start": "BASE_URL=http://localhost:3000 node server.js",
     "build": "next build",
-    "deploy": "now --token $NOW_TOKEN --npm",
-    "alias": "now alias --token=$NOW_TOKEN",
+    "deploy": "now --token @now_token_circleci --npm",
+    "alias": "now alias --token=@now_token_circleci",
     "scale": "now scale https://tdevisscher.com 1"
   },
   "keywords": [],
