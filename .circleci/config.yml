@@ -46,10 +46,7 @@ jobs:
       - run: npm test
       - run:
           name: Deploy 
-          command: npm run deploy
-      - run:
-          name: Alias 
-          command: npm run alias
+          command: now -t ${NOW_TOKEN} -npm
 
 workflows:
   version: 2
