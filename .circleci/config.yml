@@ -28,6 +28,9 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm test
   deploy-job:
+    dependencies:
+      pre:
+        - npm install -g now
     docker:
       - image: circleci/node:8.0
     working_directory: ~/repo 
