@@ -23,7 +23,7 @@
     "build": "next build",
     "deploy": "now --token $NOW_TOKEN --npm",
     "alias": "now alias --token=$NOW_TOKEN",
-    "scale": "now scale https://tdevisscher.com 1 --token=$NOW_TOKEN "
+    "scale": "now scale --token=$NOW_TOKEN https://tdevisscher.com 1"
   },
   "keywords": [],
   "author": "",
