@@ -71,7 +71,7 @@ You can read the article above [here](https://zeit.co/docs/examples/travis).
 ## Some cool things to mention about Next and this site
 
 - By using a custom server configuration, you can serve static assets such as markdown posts. Shout out to [Syntax.fm](https://syntax.fm), this website is inspired by the techniques Wes and Scott used to parse and render markdown.
-- Each component and or folder containing a component within the pages directory will render a React component.
+- Each component and or folder containing a component within the pages directory will render a React component and routing is taken care of by Next.
 - Deploying is as simple as typing ``` now ``` or in my case pushing my code to Github.
 - I'm using Milligram CSS framework which relies heavily on Flexbox for layouts. This makes the grid system really slick and intuitive.
 
