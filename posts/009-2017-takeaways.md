@@ -20,7 +20,7 @@ I'm not the first and probably won't be the last to make the switch but Visual S
 
 ### 3. [Zeit.co](https://zeit.co/)
 
-This german company impressed me with the relevance of their product offering. I am using 2 of their products currently, Next.js(The framework on which this blog built) and Now.sh(The deployment service that is provisioning this blog). 
+This US based company impressed me with the relevance of their product offering. I am using 2 of their products currently, Next.js(The framework on which this blog built) and Now.sh(The deployment service that is provisioning this blog). 
 
 Next.js: is a server rendered react app which allows you to easily build pages as components. This approach is quick and easy, it lends itself well to a blog or other content websites. 
 
