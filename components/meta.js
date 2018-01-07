@@ -16,8 +16,13 @@ export default class Meta extends React.Component {
     };
   }
   componentDidMount() {
-    this.setState({ pathName: window.location.pathname });
-    this.setState({ search: window.location.search });
+    this.getWindowInformation();
+  }
+  getWindowInformation() {
+    const pathName = window.location.pathname;
+    const search = window.location.search;
+    this.setState({ pathName });
+    this.setState({ search });
   }
   render() {
     return (
