@@ -50,10 +50,6 @@ jobs:
       - run:
           name: Alias 
           command: npm run alias
-      - run:
-          name: Scale 
-          command: npm run scale
-
 workflows:
   version: 2
   build-deploy:
