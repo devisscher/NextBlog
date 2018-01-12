@@ -132,7 +132,7 @@ const Footer = () => (
         </Li>
         <Li>
           <Butt>
-            <a className="email" href="mailto:me@tdevisscher.ca">
+            <a className="email" href="mailto:thomas@devisscher.ca">
               Email
             </a>
           </Butt>
