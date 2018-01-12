@@ -88,4 +88,5 @@ app.prepare().then(() => {
   });
   server.get('*', (req, res) => handle(req, res));
   server.listen(port);
+  console.log('Server listening on port: ', port);
 });
