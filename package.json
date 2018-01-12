@@ -8,12 +8,12 @@
   },
   "main": "server.js",
   "now": {
-    "name": "tdevisscher",
-    "alias": "tdevisscher.com",
+    "name": "devisscher",
+    "alias": "devisscher.ca",
     "env": {
       "NODE_ENV": "production",
       "TWITTER_KEY": "@twitter_key",
-      "BASE_URL": "https://tdevisscher.com"
+      "BASE_URL": "https://devisscher.ca"
     }
   },
   "scripts": {
@@ -23,7 +23,7 @@
     "build": "next build",
     "deploy": "now --token $NOW_TOKEN --npm",
     "alias": "now alias --token=$NOW_TOKEN",
-    "scale": "now scale --token=$NOW_TOKEN https://tdevisscher.com 1"
+    "scale": "now scale --token=$NOW_TOKEN https://devisscher.ca 1"
   },
   "keywords": [],
   "author": "",
