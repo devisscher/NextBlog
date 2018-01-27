@@ -13,6 +13,10 @@ const Navigation = glamorous.nav({
     maxWidth: '800px',
     margin: '0 auto',
   },
+  "& div": {
+    lineHeight: '50px',
+    color: 'white'
+  }
 });
 
 const Anchor = glamorous.a({
@@ -123,7 +127,8 @@ export default class Header extends React.Component {
     }
     return (
       <Navigation>
-        <LinkList links={links} />
+        <div>THOMAS DEVISSCHER</div>
+        {/* <LinkList links={links} /> */}
       </Navigation>
     );
   }

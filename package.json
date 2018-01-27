@@ -1,7 +1,7 @@
 {
-  "name": "nextblog",
+  "name": "blog",
   "version": "1.0.0",
-  "description": "",
+  "description": "My Blog",
   "repository": {
     "type": "git",
     "url": "https://github.com/devisscher/blog.git"
@@ -25,8 +25,15 @@
     "alias": "now alias --token=$NOW_TOKEN",
     "scale": "now scale --token=$NOW_TOKEN https://devisscher.ca 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Blog",
+    "Thomas",
+    "Devisscher",
+    "Software",
+    "Programmer",
+    "Developer"
+  ],
+  "author": "Thomas Devisscher",
   "license": "ISC",
   "dependencies": {
     "autoprefixer": "^7.1.6",
@@ -55,6 +62,7 @@
     "react-adsense": "0.0.3",
     "react-dom": "^16.0.0",
     "react-ga": "^2.3.5",
+    "react-icons-kit": "^1.0.7",
     "react-markdown": "^2.5.0",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
@@ -71,7 +79,6 @@
     "eslint-plugin-react": "^7.5.1",
     "file-loader": "^1.1.5",
     "jest": "^21.2.1",
-    "now-travis": "^1.1.0",
     "url-loader": "^0.6.2"
   }
 }

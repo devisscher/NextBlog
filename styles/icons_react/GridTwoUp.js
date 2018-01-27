@@ -1,0 +1,9 @@
+import React from 'react';
+
+export default function GridTwoUp(props) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width={8} height={8} viewBox="0 0 8 8" {...props}>
+      <path d="M0 0v3h3v-3h-3zm5 0v3h3v-3h-3zm-5 5v3h3v-3h-3zm5 0v3h3v-3h-3z" />
+    </svg>
+  );
+}

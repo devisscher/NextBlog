@@ -4,7 +4,7 @@ import AdSense from 'react-adsense';
 import Header from './Header';
 import Meta from '../components/meta';
 import Footer from '../components/Footer';
-
+import SideBar from '../components/Sidebar'
 
 const Layout = props => (
   <div>
@@ -21,6 +21,7 @@ const Layout = props => (
         format=""
       />
     </div>
+    <SideBar />
     <Footer />
   </div>
 );
