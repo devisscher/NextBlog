@@ -14,6 +14,9 @@ const Navigation = glamorous.nav({
     margin: '0 auto',
   },
   "& div": {
+    "& a": {
+      color: 'white'
+    },
     lineHeight: '50px',
     color: 'white'
   }
@@ -127,7 +130,7 @@ export default class Header extends React.Component {
     }
     return (
       <Navigation>
-        <div>THOMAS DEVISSCHER</div>
+        <div><Link href="/"><a>THOMAS DEVISSCHER</a></Link></div>
         {/* <LinkList links={links} /> */}
       </Navigation>
     );

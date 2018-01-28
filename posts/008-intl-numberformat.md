@@ -1,9 +1,9 @@
 ---
 date: 1512572774105
 title: "JavaScript: Intl.NumberFormat"
-file: "007-intl-numberformat.md"
+file: "008-intl-numberformat.md"
 number: 008
-draft: true
+draft: false
 tags: 
     - JavaScript
 ---
@@ -34,10 +34,9 @@ var language = navigator.languages
 ```
 
 ## Options
-Once we get the language we need to provide the method with an options object, we'll use `{style: percent, maximumFractionDigits: 1}`, this indicates that we want a number as a percentage and that we want the maximum number of digits after the decimal to be 1. So our value will display 50.1% if .1 is present.
+Once we get the language we need to provide the method with an options object, we'll use `{style: percent, maximumFractionDigits: 1}`, this indicates that we want a number as a percentage and that we want the maximum number of digits after the decimal to be 1.
 
 ## Usage
-
 With this you can use `Intl.NumberFormat` like so:
 
 ```JavaScript
@@ -46,7 +45,10 @@ new Intl.NumberFormat(language, { style: 'percent', maximumFractionDigits: 1 }).
 
 Now you can safely display numbers to users in any locale. But as per W3C's statement, you should allow your users to change the language as needed. To do this you could use `localStorage` perhaps.
 
-```
+```JavaScript
+
+localStorage.setItem('devisscher_locale', 'en-US');
+var locale = storage.getItem('devisscher_locale');
 
 ```
 
