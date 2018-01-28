@@ -39,11 +39,6 @@ export default class Meta extends React.Component {
           <title>Thomas Devisscher</title>
           <style dangerouslySetInnerHTML={{ __html: stylesheet.replace(/\n/g, '') }} />
           <script>
-            {/* Tracking code for: tdevisscher.com */}
-            {ReactGA.initialize('UA-110816894-1', { debug: true })}
-            {ReactGA.pageview(this.state.pathName, this.state.search)}
-          </script>
-          <script>
             {/* Tracking code for: devisscher.ca */}
             {ReactGA.initialize('UA-48758641-1', { debug: true })}
             {ReactGA.pageview(this.state.pathName, this.state.search)}
