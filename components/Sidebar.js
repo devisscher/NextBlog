@@ -96,10 +96,14 @@ export default class SideBar extends React.Component {
     }
     this.handleClick = this.handleClick.bind(this)
   }
+  componentDidMount() {
+    console.log('mounted')
+  }
 
   handleClick(e) {
     e.preventDefault()
-    this.setState({ menu: this.state.menu ? false : true })
+    const menu = this.state.menu ? false : true
+    this.setState({ menu: menu })
   }
   componentDidMount() {}
   render() {
