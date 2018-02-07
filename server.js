@@ -2,22 +2,25 @@ const express = require('express');
 const Next = require('next');
 const Router = require('./routes').Router;
 const compression = require('compression');
+const path = require('path');
 
 const dev = process.env.NODE_ENV !== 'production';
 const port = parseInt(process.env.PORT, 10) || 3000;
-const app = Next({ dev });
-const handle = app.getRequestHandler();
-const {
-  getPosts,
-  getPost,
-  getTags,
-  getPostsTaggedWith,
-  getProjects,
-  getProject,
-  getRecipes,
-  getRecipe,
-} = require('./lib/getPosts');
+const SitemapGenerator = require('sitemap-generator');
 
+const generator = SitemapGenerator('https://devisscher.ca', {
+  stripQuerystring: false,
+  filepath: path.join(process.cwd(), 'public/sitemap.xml'),
+});
+generator.on('done', () => {
+  // sitemaps created
+});
+generator.start();
+
+const app = Next({ dev });
+
+const handle = app.getRequestHandler();
+const { getPosts, getPost, getTags, getPostsTaggedWith, getProjects, getProject, getRecipes, getRecipe } = require('./lib/getPosts');
 
 app.prepare().then(() => {
   const server = express();
@@ -76,14 +79,10 @@ app.prepare().then(() => {
   server.all('*', (req, res, next) => {
     next();
   });
+  server.use('/', express.static('public'));
   Router.forEachPattern((page, pattern, defaultParams) => {
     server.get(pattern, (req, res) => {
-      app.render(
-        req,
-        res,
-        `/${page}`,
-        Object.assign({}, defaultParams, req.query, req.params),
-      );
+      app.render(req, res, `/${page}`, Object.assign({}, defaultParams, req.query, req.params));
     });
   });
   server.get('*', (req, res) => handle(req, res));
