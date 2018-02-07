@@ -16,6 +16,14 @@ $divider-color: #bdbdbd;
 $break-small: 375px;
 $break-large: 1200px;
 // Global
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+}
 
 h1, h2 {
   font-family: $roboto-slab;
@@ -26,9 +34,7 @@ h2.page-header {
   border-bottom: 1px solid #757575;
 }
 
-body {
-  margin: 0;
-}
+
 
 .page {
   max-width: 800px;
