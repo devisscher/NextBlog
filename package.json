@@ -70,16 +70,21 @@
     "redux-promise-middleware": "^5.0.0",
     "redux-thunk": "^2.2.0",
     "sass-loader": "^6.0.6",
+    "sitemap-generator": "^7.5.2",
     "speakingurl": "^14.0.1"
   },
   "devDependencies": {
+    "eslint": "^4.17.0",
     "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.5.1",
     "file-loader": "^1.1.5",
     "jest": "^21.2.1",
     "now": "^9.2.7",
+    "prettier": "^1.10.2",
     "url-loader": "^0.6.2"
   }
 }

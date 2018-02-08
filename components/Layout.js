@@ -4,7 +4,7 @@ import AdSense from 'react-adsense';
 import Header from './Header';
 import Meta from '../components/meta';
 import Footer from '../components/Footer';
-import SideBar from '../components/Sidebar'
+import SideBar from '../components/Sidebar';
 
 const Layout = props => (
   <div>
@@ -15,7 +15,10 @@ const Layout = props => (
       <AdSense.Google
         client="ca-pub-8615534749322314"
         style={{
-          display: 'block', width: '100%', height: '200px', backgroundColor: 'white',
+          display: 'block',
+          width: '100%',
+          height: '200px',
+          backgroundColor: 'white',
         }}
         slot=""
         format=""
