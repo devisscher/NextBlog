@@ -1,6 +1,6 @@
 import React from 'react';
 import glamorous from 'glamorous';
-
+import { footer } from '../lib/data';
 
 const List = glamorous.ul({
   listStyle: 'none',
@@ -66,14 +66,10 @@ const Footer = () => (
       width: '100vw',
     }}
   >
-
     <hr />
     <p>
       <small>
-        <strong>
-          Written by Thomas Devisscher who lives and works in Ottawa, Canada
-          building JavaScript and Python things. You should follow him.
-        </strong>
+        <strong>{footer.text}</strong>
       </small>
     </p>
     <div
@@ -102,30 +98,21 @@ const Footer = () => (
         </Li>
         <Li>
           <Butt>
-            <a
-              className="instagram"
-              href="https://www.instagram.com/tdevisscher/"
-            >
+            <a className="instagram" href="https://www.instagram.com/tdevisscher/">
               Instagram
             </a>
           </Butt>
         </Li>
         <Li>
           <Butt>
-            <a
-              className="strava"
-              href="https://www.strava.com/athletes/1931557"
-            >
+            <a className="strava" href="https://www.strava.com/athletes/1931557">
               Strava
             </a>
           </Butt>
         </Li>
         <Li>
           <Butt>
-            <a
-              className="linkedin"
-              href="https://www.linkedin.com/in/devisscher/"
-            >
+            <a className="linkedin" href="https://www.linkedin.com/in/devisscher/">
               Linkedin
             </a>
           </Butt>

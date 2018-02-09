@@ -10,13 +10,10 @@ module.exports = {
                 "trailingComma": "es5",
                 "singleQuote": true,
                 "printWidth": 300,
-                "noExtraSemi": true
             }
         ]
     },
-    
     "plugins": [
         "prettier"
     ]
-
 };

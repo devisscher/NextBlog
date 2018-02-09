@@ -1,6 +1,6 @@
 const express = require('express');
 const Next = require('next');
-const Router = require('./routes').Router;
+const { Router } = require('./routes').Router;
 const compression = require('compression');
 const path = require('path');
 
