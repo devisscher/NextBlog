@@ -6,16 +6,6 @@ const path = require('path');
 
 const dev = process.env.NODE_ENV !== 'production';
 const port = parseInt(process.env.PORT, 10) || 3000;
-const SitemapGenerator = require('sitemap-generator');
-
-const generator = SitemapGenerator('https://devisscher.ca', {
-  stripQuerystring: false,
-  filepath: path.join(process.cwd(), 'public/sitemap.xml'),
-});
-generator.on('done', () => {
-  // sitemaps created
-});
-generator.start();
 
 const app = Next({ dev });
 
