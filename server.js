@@ -1,6 +1,6 @@
 const express = require('express');
 const Next = require('next');
-const { Router } = require('./routes').Router;
+const Router = require('./routes').Router;
 const compression = require('compression');
 const path = require('path');
 
@@ -70,6 +70,7 @@ app.prepare().then(() => {
     next();
   });
   server.use('/', express.static('public'));
+
   Router.forEachPattern((page, pattern, defaultParams) => {
     server.get(pattern, (req, res) => {
       app.render(req, res, `/${page}`, Object.assign({}, defaultParams, req.query, req.params));
