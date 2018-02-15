@@ -11,6 +11,7 @@ const Grid = glamorous.div({
   gridAutoRows: 'minmax(100px, auto)',
 });
 const Banner = glamorous.div({
+  display: 'none',
   gridColumn: '1 / 4',
   gridRow: 1,
   zIndex: '-1',
